@@ -1,0 +1,62 @@
+<$mt:Var name="entries_per_page" value="10"$>
+<mt:SetVarBlock name="search_link">
+    <$mt:CGIPath$><$mt:SearchScript$>?IncludeBlogs=<$mt:BlogID$>
+    &template_id=<$mt:BuildTemplateID$>
+    &limit=<$mt:Var name="entries_per_page"$>
+    &archive_type=<$mt:ArchiveType$>
+    &category=<$mt:CategoryID$>
+    &page=
+</mt:SetVarBlock>
+<$mt:Var name="search_link" strip="" trim="1" setvar="search_link"$>
+<!DOCTYPE html>
+<html>
+    <head>
+<mt:If name="search_results">
+    <mt:IfUserAgent wants="SmartPhone">
+        <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+    <mt:Else>
+        <$mt:Include module="<__trans phrase="HTML Head">"$>
+    </mt:Else>
+    </mt:IfUserAgent>
+<mt:Else>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+        <mt:DynamicMTML>
+            <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+        </mt:DynamicMTML>
+    <mtml tag="mt:else">
+        <$mt:Include module="<__trans phrase="HTML Head">"$>
+    <mtml tag="/mt:IfUserAgent">
+</mt:If>
+        <title><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
+    </head>
+    <body class="archive entry-listing category">
+        <div class="container" data-role="page" data-theme="a">
+            <header class="page-header" data-role="header">
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+            </header>
+            <div class="content" data-role="content" data-theme="a">
+                <section class="main-content">
+                    <h1 class="title content-title"><__trans phrase="Recently in [_1] Category" params="<$mt:ArchiveTitle$>"></h1>
+              
+<$mt:Include widget="<__trans phrase="Entry Listing (Thumbnail)">"$>
+                </section>
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+    <mtml tag="mt:else">
+                <div class="related-content">
+        <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
+                </div>
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>
+            </div>
+            <footer class="page-footer" data-role="footer" data-theme="a">
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+            </footer>
+        </div>
+        <script> 
+        jQuery(function() {
+            jQuery('.menu').mtToggleField();       
+        });
+        </script>
+    </body>
+</html>

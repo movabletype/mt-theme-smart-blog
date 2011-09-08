@@ -1,0 +1,17 @@
+<mt:Tags>
+    <mt:if name="__first__">
+<nav id="menu-tags" class="widget menu-content">
+    <h2 class="title widget-title"><__trans phrase="Tags"></h2>
+    <ul>
+    </mt:if>
+        <li class="nav-item">
+            <a href="<$mt:TagSearchLink$>">
+    <$mt:TagName$>
+                <span class="count"><$mt:TagCount$></span>
+            </a>
+        </li>
+    <mt:if name="__last__">
+    </ul>
+</nav>
+    </mt:if>
+</mt:Tags>

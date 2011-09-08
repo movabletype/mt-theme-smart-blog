@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<mt:IfUserAgent wants="SmartPhone">
+    <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+<mt:Else>
+    <$mt:Include module="<__trans phrase="HTML Head">"$>
+</mt:IfUserAgent>
+        <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Page Not Found"></title>
+    </head>
+    <body>
+        <div class="container" data-role="page" data-theme="a">
+            <header class="page-header" data-role="header">
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+            </header>
+            <div class="content" data-role="content" data-theme="a">
+                <section>
+                    <h1 class="title page-title"><__trans phrase="Page Not Found"></h1>
+                    <pre><strong><$mt:ErrorMessage$></strong></pre>
+                </section>
+            </div>
+            <footer class="page-footer" data-role="footer" data-theme="a">
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+            </footer>
+        </div>
+        <script>
+        jQuery(function() {
+            jQuery('.menu').mtToggleField();
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+    <fieldset>
+        <legend><__trans phrase="Post a Comment"></legend>
+        <input type="hidden" name="static" value="1" />
+        <input type="hidden" name="armor" value="1" />
+        <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+        <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+        <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+        <input type="hidden" name="preview" value="<mt:if name="comment_preview">1</mt:if>" />
+        <input type="hidden" name="sid" value="" />
+
+        <div id="comment-form-reply" style="display:none">
+            <input type="checkbox" id="comment-reply" name="comment-reply" value="" onclick="mtSetCommentParentID()" data-role="none">
+            <label for="comment-reply" id="comment-reply-label"><__trans phrase="Reply to comment"></label>
+        </div>
+
+        <div id="comments-open-text">
+            <label for="comment-text"><__trans phrase="Comments"></label>
+            <textarea id="comment-text" name="text" required="required" onfocus="mtCommentFormOnFocus()"><mt:If name="comment_preview"><mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"></mt:If></textarea>
+<mt:IfAllowCommentHTML>
+            <p class="message"><__trans phrase="You may use HTML tags for style."></p>
+</mt:IfAllowCommentHTML>
+        </div>
+
+        <div id="commenter-info">
+            <ul>
+                <li>
+                    <label for="comment-author"><__trans phrase="Name"></label>
+                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
+                    <input type="text" id="comment-author" class="text" name="author" value="<mt:If name="comment_preview"><mt:CommentAuthor encode_html="1"></mt:If>" placeholder="Your Name" onfocus="mtCommentFormOnFocus()" <mt:IfRequireCommentEmails>required="required"</mt:IfRequireCommentEmails>>
+                </li>
+                <li>
+                    <label for="comment-email"><__trans phrase="Email"></label>
+                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
+                    <input type="email" id="comment-email" class="text" name="email" value="<mt:If name="comment_preview"><mt:CommentEmail encode_html="1"></mt:If>" placeholder="mail@example.com" onfocus="mtCommentFormOnFocus()" <mt:IfRequireCommentEmails>required="required"</mt:IfRequireCommentEmails>>
+                </li>
+                <li>
+                    <label for="comment-url"><__trans phrase="URL"></label>
+                    <input type="url" id="comment-url" class="text" name="url" value="<mt:If name="comment_preview"><mt:CommentURL encode_html="1"></mt:If>" placeholder="http://www.example.com/" onfocus="mtCommentFormOnFocus()">
+                </li>
+            </ul>
+        </div>
+
+    </fieldset>
+
+<mt:If tag="CaptchaFields">
+    <div id="comments-open-captcha"><$MTCaptchaFields$></div>
+</mt:If>
+
+    <div id="comments-open-footer" class="actions-bar">
+<mt:If name="comment_preview">
+        <input type="submit" accesskey="s" name="post" id="comment-submit" class="primary button" value="<__trans phrase="Submit">" />
+        <input type="submit" accesskey="v" name="preview_button" id="comment-preview" class="button" value="<__trans phrase="Preview">" onclick="this.form.preview.value='1';" />
+        <input type="button" name="cancel" id="comment-cancel" class="button" value="<__trans phrase="Cancel">" onclick="window.location='<mt:EntryPermalink abs2rel="1">'">
+<mt:Else>
+        <input type="submit" accesskey="s" name="post" id="comment-submit" class="primary button" value="<__trans phrase="Submit">" />
+        <input type="submit" accesskey="v" name="preview_button" id="comment-preview" class="button" value="<__trans phrase="Preview">" onclick="this.form.preview.value='1';" />
+</mt:If>
+    </div>
+
+</form>
+
+<mt:IfCommentsAccepted>
+<script type="text/javascript">
+    mtAttachEvent("load", mtEntryOnLoad);
+    mtAttachEvent("unload", mtEntryOnUnload);
+</script>
+</mt:IfCommentsAccepted>

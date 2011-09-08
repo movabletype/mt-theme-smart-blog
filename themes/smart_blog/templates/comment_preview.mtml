@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<mt:IfUserAgent wants="SmartPhone">
+    <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+<mt:Else>
+    <$mt:Include module="<__trans phrase="HTML Head">"$>
+</mt:IfUserAgent>
+        <title><__trans phrase="Previewing your Comment"> - <$mt:BlogName encode_html="1"$></title>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var user = <$mt:UserSessionState$>;
+            var is_preview = true;
+        /* ]]> */
+        </script>
+    </head>
+    <body class="system">
+        <div class="container" data-role="page" data-theme="a">
+            <header class="page-header" data-role="header">
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+            </header>
+            <div class="content" data-role="content" data-theme="a">
+                <section id="comment-preview" class="feedback">
+                    <h1 class="title content-title"><__trans phrase="Previewing and edit your Comment"></h1>
+                    <article id="comment-<$mt:CommentID$>" class="feedback comment comment-preview<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
+                        <h2 class="title comment-title"><mt:IfCommentParent><__trans phrase="[_1] replied to <a href="[_2]">comment from [_3]</a>" params="<$mt:CommentAuthorLink$>%%<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>%%<mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>"><mt:Else><$mt:CommentAuthorLink$></mt:IfCommentParent></h2>
+<$mt:CommentBody$>
+                        <footer class="comment-footer">
+                            <time pubdate="pubdate" datetime="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></time>
+                        </footer>
+                    </article>
+
+<mt:Include module="<__trans phrase="Comment Form">">
+
+                </section>
+            </div>
+            <footer data-role="footer" data-theme="a" class="page-footer">
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+            </footer>
+        </div>
+        <script>
+        jQuery(function() {
+            jQuery('.menu').mtToggleField();
+        });
+        </script>
+    </body>
+</html>

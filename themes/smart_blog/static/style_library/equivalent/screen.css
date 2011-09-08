@@ -1,0 +1,187 @@
+/*
+
+Name: Equivalent
+designer: Taichi Kaminogoya
+designer_url: http://www.sixapart.jp/
+
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    color: #274a78;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.ui-link {
+    color: #274a78;
+}
+
+.ui-bar-a,
+.page-header, 
+.page-footer {
+    border: 0;
+    background: #007bbb;
+    color: #fff;
+    text-shadow: none;
+    font-weight: normal;
+}
+.ui-bar-a,
+.ui-bar-a input,
+.ui-bar-a select,
+.ui-bar-a textarea,
+.ui-bar-a button {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.page-header a, 
+.page-footer a, 
+.ui-bar-a .ui-link {
+    color: #fff;
+}
+.ui-header {
+    padding: 1px 0 0;
+    border-bottom: 1px solid #fff;
+}
+
+.ui-body-a {
+    color: #000;
+    background: #fff;
+    text-shadow: none;
+}
+.ui-body-a,
+.ui-body-a input,
+.ui-body-a select,
+.ui-body-a textarea,
+.ui-body-a button {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.ui-body-a .ui-link-inherit {
+    color: #000;
+}
+
+.ui-content {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 10%, from(#f3f3f3), to(#fff));
+}
+
+.ui-btn-up-a {
+    border: 1px solid #ccc;
+    background: #eee;
+    font-weight: bold;
+    color: #444;
+    text-shadow: 0 1px 1px #f6f6f6;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eee)); /* Saf4+, Chrome */
+    background-image: linear-gradient(top, #fdfdfd, #eee);
+}
+.ui-btn-up-a a.ui-link-inherit {
+    color: #2F3E46;
+}
+
+.ui-btn-hover-a {
+    border: 1px solid #bbb;
+    background: #dadada;
+    font-weight: bold;
+    color: #101010;
+    text-shadow: 0 1px 1px #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#dadada)); /* Saf4+, Chrome */
+    background-image: linear-gradient(top, #ededed, #dadada);
+}
+.ui-btn-hover-a a.ui-link-inherit {
+    color: #2F3E46;
+}
+.ui-btn-down-a {
+    border: 1px solid #808080;
+    background: #fdfdfd;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: 0 1px 1px #ffffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fdfdfd)); /* Saf4+, Chrome */
+    background-image: linear-gradient(top, #eee, #fdfdfd);
+}
+.ui-btn-down-a a.ui-link-inherit {
+    color: #2F3E46;
+}
+.ui-btn-up-a,
+.ui-btn-hover-a,
+.ui-btn-down-a {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.entry-title {
+    font-weight: normal;
+    color: #007bbb;
+}
+
+.menu .detail-link {
+    background: transparent url(../../images/icon-search-white.png) no-repeat center;
+}
+
+.menu.active .detail-link, 
+.menu .detail {
+    background-color: #38a1db;
+}
+.menu .tab {
+    color: #fff;
+}
+.tab.active, 
+.menu-content {
+    background-color: #fff;
+    color: #000;
+}
+.menu-content .nav-item { 
+    border-color: #38a1db;
+}
+.menu-content .nav-item a {
+    color: #000;
+}
+.menu-content .nav-item > span {
+    color: #9ea1a3;
+}
+.menu-content .nav-item a {
+    background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
+}
+.count {
+    border: 0;
+    border-radius: 1em;
+    background: #939393;
+    color: #fff;
+}
+
+time {
+    color: #9ea1a3;
+}
+
+.entry-footer {
+    background-color: #bfc5c8;
+    padding: 1px 0.62em;
+    border-radius: 0.62em;
+}
+
+#comments h1, 
+.comment, 
+#comment-greeting, 
+#comment-form-reply, 
+.feedback fieldset, 
+#commenter-info li {
+    border-color: #bfc5c8;
+}
+
+#comments h1 {
+    border-radius: 0.62em 0.62em 0 0;
+}
+.comment:last-child {
+    border-radius: 0 0 0.62em 0.62em;
+}
+#comment-greeting .signout-link {
+    background: #939393 url(../../images/icon-close-white.png) no-repeat center;
+    border-radius: 0 0.62em 0.62em 0;
+}
+#comment-greeting, 
+.feedback fieldset, 
+.feedback .comment-preview {
+    border-radius: 0.62em;
+}

@@ -1,0 +1,415 @@
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* - Elements */
+article {
+    margin-bottom: 2.62em;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin: 0.62em 0;
+    font-size: 1.62em;
+    text-rendering: optimizeLegibility;
+}
+h2 {
+    font-size: 140%;
+}
+h3 {
+    font-size: 120%;
+}
+h4, 
+h5, 
+h6 {
+    font-size: 100%;
+}
+
+p {
+    margin: 1.62em 0;
+    line-height: 1.62;
+}
+
+ul, 
+ol {
+    margin: 1.62em 0 1.62em 1.62em;
+    padding: 0;
+}
+li {
+    margin: 0 0 0.62em;
+}
+li ul, 
+li ol { 
+    margin: 0 1.62em;
+}
+
+dl {
+    margin: 1.62em 0;
+}
+dt {
+    margin: 0.62em 0;
+}
+
+pre { 
+    overflow: auto;
+    margin: 1.62em auto;
+    padding: 1.62em;
+    font-family: monospace;
+}
+
+blockquote { 
+    clear: both;
+    margin: 1.62em auto;
+    padding: 1px 1.62em;
+}
+
+table { 
+    width: 100%;
+    margin: 0 auto 1.62em;
+    border-spacing: 0;
+}
+th, 
+td { 
+    padding: 0.62em;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+th { 
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+legend {
+    display: none;
+}
+
+figure {
+    margin: 1.62em 0;
+}
+
+time {
+    font-size: 90%;
+}
+
+/* - Layout */
+.content {
+    width: 960px;
+    margin: 1.62em auto;
+    padding: 0 10px;
+}
+
+.main-content {
+    float: left;
+    width: 640px;
+    overflow: hidden;
+}
+
+.related-content {
+    float: right;
+    width: 280px;
+    margin-left: 10px;
+}
+
+.page-header,
+.page-footer {
+    padding: 1px 10px;
+}
+
+footer {
+    clear: both;
+}
+
+/* - Component */
+.toggle-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-decoration: none;
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+}
+.tab {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0.62em;
+    color: #000;
+    font-size: 90%;
+    text-shadow: none;
+}
+.tab:hover {
+    cursor: pointer;
+}
+.tab.active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* - Header */
+header {
+    position: relative;
+}
+header a {
+    text-decoration: none;
+}
+.page-title {
+    width: 960px;
+    margin: 0.62em auto;
+}
+.content-title {
+    margin: 0.62em 0;
+}
+
+
+/* - Banner */
+.banner {
+    width: 960px;
+    margin: 1.62em auto;
+    padding: 0 10px;
+}
+.banner img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* - List */
+
+/* - Article */
+.entry {
+    margin-bottom: 4.2em;
+}
+.entry-header time {
+    margin: 0 0 0.62em;
+}
+.entry-title {
+    margin: 0 0 0.62em;
+}
+.entry-content {
+    margin: 1.62em 0;
+}
+.entry-footer {
+    margin-top: 1.62em;
+    font-size: 90%;
+}
+.entry-footer ul {
+    margin: 0.62em 0;
+    padding: 0;
+}
+.entry-footer li {
+    list-style-type: none;
+}
+.entry-feedback li {
+    display: inline;
+    margin-right: 0.62em;
+}
+.entry-footer address {
+    display: inline;
+    font-style: normal;
+}
+
+
+/* - Feedback Comments */
+.feedback {
+    margin: 1.62em 0 0.62em;
+}
+
+/* -- Comments */
+#comments h1 {
+    margin: 0;
+    padding: 0.62em 9px;
+    border: 1px solid #000;
+    font-size: 100%;
+}
+.comment {
+    margin: 0;
+    padding: 0.62em 9px;
+    border: solid #000;
+    border-width: 0 1px 1px;
+}
+.comment p {
+    margin-top: 0;
+}
+.comment-preview {
+    margin-bottom: 1.62em;
+    border-width: 1px;
+}
+.comment-title {
+    display: run-in;
+    margin: 0.62em 0 0;
+    font-size: 100%;
+}
+.comment-title:after {
+    content: '-';
+    margin: 0 0.62em;
+    font-weight: normal;
+}
+.comment-footer {
+    font-size: 90%;
+}
+#comment-greeting {
+    position: relative;
+    margin: 1.62em 0 0.62em;
+    border: 1px solid;
+}
+#comment-form-reply {
+    position: relative;
+    margin-bottom: 0;
+    border: solid;
+    border-width: 0 0 1px;
+    font-size: 16px;
+}
+#comment-form-reply {
+    margin-top: 0;
+}
+#comment-greeting .indicator {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    margin-top: -9px;
+}
+#comment-greeting p, 
+#comment-form-reply label {
+    display: block;
+    margin: 0;
+    padding: 0.62em 9px;
+    font-weight: bold;
+}
+#comment-greeting .logged-in {
+    margin-right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 90%;
+}
+#comment-form-reply label {
+    padding-left: 30px;
+}
+#comment-greeting .signin-link {
+    display: block;
+    padding: 0.62em 9px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#comment-greeting .signout-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+#comment-form-reply input {
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    height: 20px;
+    margin-top: -10px;
+}
+.feedback fieldset {
+    margin-bottom: 0.62em;
+    border: 1px solid #000;
+}
+#comments-open-text label {
+    display: block;
+    padding: 0.62em 9px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+#comments-open-text textarea {
+    width: 100%;
+    min-height: 8em;
+    padding: 0.62em 9px;
+    border: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    resize: vertical;
+}
+#comments-open-text .message {
+    margin: 0;
+    padding: 0 9px 5px;
+    font-size: 90%;
+    text-align: center;
+}
+#commenter-info ul {
+    margin: 0;
+    padding: 0;
+}
+#commenter-info li {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #000;
+}
+#commenter-info li label {
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#commenter-info li .required-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.62em;
+    margin-top: -9px;
+}
+#commenter-info li input {
+    width: 100%;
+    margin: 0;
+    padding: 0.62em 9px 0.62em 4em;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 16px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#commenter-info li input[required] {
+    padding-right: 2em;
+}
+#comment-preview {
+    margin: 0 0 0.62em;
+}
+
+
+/* - Content Navigation */
+.content-nav {
+    margin: 1.62em 0;
+}
+
+
+/* - Footer */
+.page-footer {
+    font-size: 90%;
+    text-align: center;
+}
+.page-footer p {
+    margin: 0.62em 0;
+}

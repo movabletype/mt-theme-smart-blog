@@ -1,0 +1,18 @@
+<meta charset="<mt:PublishCharset>">
+<mt:If tag="BlogDescription"><meta name="description" content="<$mt:BlogDescription remove_html="1"$>"></mt:If>
+<meta name="generator" content="<$mt:ProductName version="1"$>">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="start" href="<$mt:BlogURL$>" title="Home">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>">
+<mt:Assets type="image" tag="@SITE_TOUCH_ICON" limit="1">
+<link rel="apple-touch-icon-precomposed" href="<$mt:AssetThumbnailURL width="114" square="1"$>">
+<mt:Else>
+<link rel="apple-touch-icon-precomposed" href="<$MTStaticWebPath$>support/theme_static/smart_blog/images/touch-icon-default.png">
+</mt:Assets>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.css">
+<link rel="stylesheet" href="<$mt:Link template="styles"$>">
+<link rel="stylesheet" href="<$mt:Link template="smartphone"$>">
+<script src="<$mt:Link template="Javascript"$>"></script>
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="<$mt:Link template="Theme Javascript"$>"></script>
+<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>

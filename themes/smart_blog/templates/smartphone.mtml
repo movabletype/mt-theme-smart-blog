@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    line-height: normal;
+    font-size: 16px;
+    font-family: sans-serif;
+    -webkit-user-none: select;
+    -webkit-text-size-adjust: none;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-size: 18px;
+}
+
+button,
+select, 
+textarea {
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+}
+
+
+/* - Layout */
+.content {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 9px;
+}
+.main-content {
+    float: none;
+    width: auto;
+    overflow: visible;
+}
+
+
+/* - Component */
+article img { 
+    display: block;
+    float: none ! important;
+    max-width: 100% ! important;
+    height: auto ! important;
+}
+
+.count {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    padding: 0 0.62em;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+
+/* - Header */
+.page-header, 
+.page-footer {
+    padding: 1px 0;
+    overflow: visible ! important;
+}
+
+.page-title {
+    display: block;
+    width: auto;
+    margin: 0.62em 90px;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* - Menu */
+.menu .detail-link {
+    width: 36px;
+    height: 100%;
+    margin-top: -20px;
+    text-align: center;
+}
+.menu .detail {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    -webkit-box-shadow: #000 0 6px 8px;
+}
+.menu-content {
+    padding: 0;
+}
+#menu-search {
+    margin: 0;
+    padding: 0.62em;
+}
+#menu-search .ui-input-search {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+}
+.menu-content ul {
+    margin: 0;
+    padding: 0;
+}
+.menu-content .nav-item { 
+    margin: 0;
+    list-style-type: none;
+    border-width: 1px 0 0;
+    border-style: solid;
+}
+.menu-content > ul > .nav-item:first-child { 
+    border: 0;
+}
+.menu-content .nav-item a, 
+.menu-content .nav-item > span {
+    position: relative;
+    display: block;
+    padding: 10px 80px 10px 9px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu-content .nav-item li a, 
+.menu-content .nav-item li > span {
+    padding-left: 1em;
+}
+.menu-content .nav-item li li a, 
+.menu-content .nav-item li li > span {
+    padding-left: 2em;
+}
+.menu-content .nav-item li li li a, 
+.menu-content .nav-item li li li > span {
+    padding-left: 3em;
+}
+.menu-content .nav-item li li li li a, 
+.menu-content .nav-item li li li li > span {
+    padding-left: 4em;
+}
+.menu-content .nav-item li li li li li a, 
+.menu-content .nav-item li li li li li > span {
+    padding-left: 5em;
+}
+.menu-content .nav-item li li li li li li a, 
+.menu-content .nav-item li li li li li li > span {
+    padding-left: 6em;
+}
+.menu-content .nav-item .count {
+    right: 25px;
+}
+
+/* - Banner */
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* - List */
+.ui-content .ui-listview {
+    margin: 0 -9px;
+}
+.nav-item time {
+    position: absolute;
+    top: 10px;
+    right: 35px;
+}
+
+
+/* - Article */
+.entry-header {
+  margin: 0.62em 0;
+}
+
+
+/* - Comments */
+#comments-open-footer .ui-btn {
+    width: 100%;
+    margin: 0.62em 0 0;
+}
+
+
+/* - Content Navigation */
+.content-nav .ui-btn {
+    width: 50%;
+    -webkit-box-sizing: border-box;    
+}

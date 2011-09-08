@@ -1,0 +1,22 @@
+<nav class="index entry-listing">
+    <ul class="nav-list" data-role="listview">
+<mt:Pages limit="$entries_per_page" search_results="1">
+        <li class="nav-item has-thumb">
+            <a href="<$mt:PagePermalink$>">
+    <mt:PageAssets lastn="1">
+                <img src="<mt:AssetThumbnailURL square="1" width="80">" class="thumb ui-li-thumb">
+    <mt:Else>
+                <img src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/no-image.png" alt="<__trans phrase="No Image">" class="thumb ui-li-thumb">
+    </mt:PageAssets>
+                <div class="ui-li-heading">
+    <mt:if tag="PageTitle">
+        <$mt:PageTitle$>
+    <mt:Else>
+                    <__trans phrase="Untitled">
+    </mt:If>
+                </div>
+            </a>
+        </li>
+</mt:Pages>
+    </ul>
+</nav>

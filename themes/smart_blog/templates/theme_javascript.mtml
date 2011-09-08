@@ -1,0 +1,59 @@
+$(document).bind("mobileinit", function(){
+    if ( window.location.hash.match( /^#+_/ ) ) window.location.hash = '';
+    $.mobile.ajaxEnabled = false;
+});
+
+jQuery(function() {
+    $('#menu-tabs .menu-content').hide();
+    $('#menu-tabs .menu-content:first').show();
+    $('.tabs > .tab:first').addClass('active');
+    $('.tabs > .tab').bind("click", function () {
+        $('.tabs > .tab').removeClass('active');
+        $(this).addClass('active');
+        var current = $(this).attr('data-tab');
+        $('#menu-tabs .menu-content').hide();
+        $('#' + current).show();
+        return false;
+    });
+});
+
+;(function($) {
+/*
+ * mtToggleField
+ *
+ * Usage:
+ *   jQuery('.msg').mtToggleField();
+ *   jQuery('.msg').mtToggleField({hide_clicked: true});
+ *
+ */
+$.fn.mtToggleField = function(options) {
+    var defaults = {
+        click_class: 'detail-link',
+        detail_class: 'detail',
+        hide_clicked: false,
+        default_hide: true
+    };
+    var opts = $.extend(defaults, options);
+    return this.each(function() {
+        var $field = $(this);
+        if (opts.default_hide)
+            $field.find('.'+opts.detail_class).hide();
+        $field.find('.'+opts.click_class)
+            .mousedown(function(event) {
+                $field.toggleClass('active').find('.'+opts.detail_class).toggle();
+                return false;
+            })
+            .click(function(event) {
+                return false;
+            });
+
+        if (opts.hide_clicked) {
+            $(document).mousedown(function(event) {
+                if ($(event.target).parents('.active').length == 0) {
+                    $field.removeClass('active').find('.'+opts.detail_class).hide();
+                }
+            });
+        }
+    });
+};
+})(jQuery);

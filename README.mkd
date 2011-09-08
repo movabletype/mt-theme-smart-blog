@@ -1,0 +1,7 @@
+# Smart Blog Theme for Movable Type 5
+
+## Installation
+
+1. Unpack the mt-theme-smart-blog archive.
+2. Copy the contents of mt-theme-smart-blog/themes/smart-blog into /path/to/mt/themes
+3. Sign in to your Movable Type and apply the Smart Blog theme.

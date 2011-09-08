@@ -1,0 +1,57 @@
+<$mt:Var name="entries_per_page" value="10"$>
+<mt:SetVarBlock name="search_link">
+    <$mt:CGIPath$><$mt:SearchScript$>?IncludeBlogs=<$mt:BlogID$>
+    &template_id=<$mt:BuildTemplateID$>
+    &limit=<$mt:Var name="entries_per_page"$>
+    &archive_type=Index
+    &page=
+</mt:SetVarBlock>
+<$mt:Var name="search_link" strip="" trim="1" setvar="search_link"$>
+<!DOCTYPE html>
+<html>
+    <head>
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+        <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+    <mtml tag="mt:else">
+        <mt:Ignore><!-- for Other --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="HTML Head">"$>
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>    
+        <title><$mt:BlogName encode_html="1"$></title>
+    </head>
+    <body class="main-index">
+        <div class="container" data-role="page" data-theme="a">
+            <header class="page-header" data-role="header">
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+            </header>
+<mt:Assets tag="@SITE_BANNER" limit="1">
+            <div class="banner">
+                <img src="<$mt:AssetThumbnailURL width="1024"$>">
+            </div>
+</mt:Assets>
+            <div class="content" data-role="content" data-theme="a">
+                <div class="main-content">
+<$mt:WidgetSet name="<__trans phrase="Main Index Content">"$>
+                </div>
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+    <mtml tag="mt:else">
+               <div class="related-content">
+        <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
+               </div>
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>    
+            </div>
+            <footer class="page-footer" data-role="footer" data-theme="a">
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+            </footer>
+        </div>
+        <script>
+        jQuery(function() {
+            jQuery('.menu').mtToggleField();
+        });
+        </script>
+    </body>
+</html>
