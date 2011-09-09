@@ -34,16 +34,20 @@ p {
 
 ul, 
 ol {
-    margin: 1.62em 0 1.62em 1.62em;
-    padding: 0;
+    margin: 1.62em auto;
 }
 li {
     margin-bottom: 0.62em;
 }
 li ul, 
 li ol { 
-    margin: 0.62em 1.62em;
+    margin: 0.62em auto;
 }
+ol, 
+li ol {
+    margin-left: 0.2em;
+}
+
 
 dl {
     margin: 1.62em 0;
@@ -304,6 +308,7 @@ content-title {
     margin-bottom: 4.2em;
 }
 .entry-header time {
+    display: inline-block;
     margin: 0 0 0.62em;
     font-size: 90%;
 }

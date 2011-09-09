@@ -201,6 +201,12 @@ fieldset {
     border: 1px solid #bfc5c8;
 }
 
+abbr, 
+acronym { 
+    border-color: #bfc5c8;
+}
+
+
 header time {
     color: #9ea1a3;
 }
