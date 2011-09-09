@@ -151,12 +151,50 @@ a:hover {
     color: #fff;
 }
 
-time {
+table { 
+    border: 1px solid #bfc5c8;
+    border-width: 1px 0 0 1px;
+    background-color: #fff;
+}
+th, 
+td { 
+    border: solid #bfc5c8;
+    border-width: 0 1px 1px 0;
+    word-wrap: break-word;
+}
+th { 
+    background-color: #e8ecef;
+}
+
+cite {
+    color: #9ea1a3;
+}
+
+
+hr {
+    border-color: #bfc5c8;
+    border-style: solid;
+    border-width: 1px 0 0;
+}
+
+pre {
+    background-color: #f3f3f3;
+}
+
+blockquote {
+    border: 1px solid #bfc5c8;
+}
+
+fieldset {
+    border: 1px solid #bfc5c8;
+}
+
+header time {
     color: #9ea1a3;
 }
 
 .entry-footer {
-    background-color: #f3f3f3;
+    background-color: #e8ecef;
     padding: 1px 0.62em;
     border-radius: 0.62em;
 }

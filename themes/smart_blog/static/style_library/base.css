@@ -57,6 +57,7 @@ pre {
     margin: 1.62em auto;
     padding: 1.62em;
     font-family: monospace;
+    font-size: 90%;
 }
 
 blockquote { 
@@ -82,12 +83,31 @@ th {
     white-space: nowrap;
 }
 
+hr {
+    margin: 1.62em 0;
+}
+
+abbr, 
+acronym { 
+    cursor: help;
+    border-bottom: 1px dotted;
+}
+
+code, 
+samp, 
+kbd, 
+var { 
+    font-family: monospace;
+    font-size: 100%;
+}
+
 fieldset {
     margin: 0;
-    padding: 0;
+    padding: 0 1.62em 1.62em;
 }
+
 legend {
-    display: none;
+    padding: 0 0.62em;
 }
 
 header, 
@@ -177,7 +197,7 @@ header a {
     width: 960px;
     margin: 0.62em auto;
 }
-.content-title {
+content-title {
     margin: 0 0 0.62em;
 }
 
@@ -332,8 +352,12 @@ header a {
     margin-top: -10px;
 }
 .feedback fieldset {
-    margin-bottom: 0.62em;
+    margin: 0 0 0.62em;
+    padding: 0;
     border: 1px solid #000;
+}
+.feedback legend {
+    display: none;
 }
 #comments-open-text label {
     display: block;
