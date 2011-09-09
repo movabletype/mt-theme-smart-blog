@@ -128,15 +128,23 @@ a:hover {
     color: #fff;
 }
 .tab.active, 
-.menu-content {
+.menu .menu-content {
     background-color: #fff;
     color: #000;
 }
+.menu-content > ul,
 .menu-content .nav-item { 
+    border-color: #bfc5c8;
+}
+.menu .menu-content > ul,
+.menu .menu-content .nav-item { 
     border-color: #38a1db;
 }
 .menu-content .nav-item a {
     color: #000;
+}
+.menu-content .nav-item a:hover {
+    background-color: #f3f3f3;
 }
 .menu-content .nav-item > span {
     color: #9ea1a3;
@@ -144,12 +152,16 @@ a:hover {
 .menu-content .nav-item a {
     background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
 }
+
 .count {
     border: 0;
     border-radius: 1em;
-    background: #939393;
+    background: #bfc5c8;
     color: #fff;
+    font-size: 90%;
+    font-weight: bold;
 }
+
 
 table { 
     border: 1px solid #bfc5c8;

@@ -34,7 +34,7 @@ elements:
             outfile: mt.js
             rebuild_me: 1
           theme_javascript:
-            label: Theme Javascript
+            label: Theme JavaScript
             outfile: mt-theme-smart-blog.js
             rebuild_me: 1
           main_index:
