@@ -80,44 +80,45 @@
             <div class="content" data-role="content" data-theme="a">
 <mt:SetVarTemplate id="search_results" name="search_results">
     <mt:SearchResults>
-        <mt:SearchResultsHeader>
-                <section>
+        <mt:IfUserAgent wants="SmartPhone">
+            <mt:SearchResultsHeader>
+                <section class="main-content">
                     <h1 class="title content-title">
-            <mt:IfStraightSearch>
+                <mt:IfStraightSearch>
                         <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-            </mt:IfStraightSearch>
-            <mt:IfTagSearch>
+                </mt:IfStraightSearch>
+                <mt:IfTagSearch>
                         <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-            </mt:IfTagSearch>
+                </mt:IfTagSearch>
                     </h1>
                     <nav class="index entry-listing">
                         <ul class="nav-list" data-role="listview">
-        </mt:SearchResultsHeader>
+            </mt:SearchResultsHeader>
                             <li class="nav-item">
                                 <a href="<$mt:EntryPermalink$>">
                                     <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%b %d, %Y"$></time>
                                     <div class="title entry-title ui-li-heading">
-        <mt:if tag="EntryTitle">
-            <$mt:EntryTitle$>
-        <mt:Else>
+            <mt:if tag="EntryTitle">
+                <$mt:EntryTitle$>
+            <mt:Else>
                                         <__trans phrase="Untitled">
-        </mt:If>
+            </mt:If>
                                     </div>
                                     <div class="meta ui-li-desc">
                                         <span class="author">by <$mt:EntryAuthor$></span>
-        <mt:IfArchiveTypeEnabled archive_type="Category">
-            <mt:If tag="EntryCategories">
+            <mt:IfArchiveTypeEnabled archive_type="Category">
+                <mt:If tag="EntryCategories">
                                         <span class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></span>
-            </mt:If>
+                </mt:If>
                                     </div>
-        </mt:IfArchiveTypeEnabled>
-        <mt:if tag="EntryCommentCount">
+            </mt:IfArchiveTypeEnabled>
+            <mt:if tag="EntryCommentCount">
                                     <div class="comments count ui-li-count"><$mt:EntryCommentCount$></div>
-        </mt:if>
+            </mt:if>
                                 </a>
                             </li>
 
-        <mt:SearchResultsFooter>
+            <mt:SearchResultsFooter>
                         </ul>
                     </nav>
                 <mt:If name="has_content_nav">
@@ -131,14 +132,41 @@
                     </nav>
                 </mt:If>
                 </section>
-        </mt:SearchResultsFooter>
+            </mt:SearchResultsFooter>
+        <mt:Else>
+            <mt:SearchResultsHeader>
+                <section class="main-content">
+                    <h1 class="title content-title">
+                <mt:IfStraightSearch>
+                        <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                </mt:IfStraightSearch>
+                <mt:IfTagSearch>
+                        <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                </mt:IfTagSearch>
+                    </h1>
+            </mt:SearchResultsHeader>
+            <$mt:Include module="<__trans phrase="Entry Summary">"$>
+            <mt:SearchResultsFooter>
+                <mt:If name="has_content_nav">
+                    <nav class="content-nav" data-role="controlgroup" data-type="horizontal">
+                <mt:IfPreviousResults>
+                        <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev" data-role="button"><__trans phrase="Previous"></a>
+                </mt:IfPreviousResults>
+                <mt:IfMoreResults>
+                        <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next" data-role="button"><__trans phrase="Next"></a>
+                </mt:IfMoreResults>
+                    </nav>
+                </mt:If>
+                </section>
+            </mt:SearchResultsFooter>
+        </mt:IfUserAgent>
     </mt:SearchResults>
 </mt:SetVarTemplate>
 
 <$mt:Var name="search_results"$>
 
 <mt:NoSearchResults>
-                <section>
+                <section class="main-content">
                     <h1 class="title content-title">
     <mt:IfStraightSearch>
                         <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
@@ -152,7 +180,7 @@
 </mt:NoSearchResults>
 
 <mt:NoSearch>
-                <section>
+                <section class="main-content">
                     <h1 id="title content-title" class="search-results-header"><__trans phrase="Instructions"></h1>
                     <p><__trans phrase="By default, this search engine looks for all words in any order. To search for an exact phrase, enclose the phrase in quotes:"></p>
                     <pre><code>"<__trans phrase="movable type">"</code></pre>
@@ -161,6 +189,15 @@
                     <pre><code><__trans phrase="publishing NOT personal"></code></pre>
                 </section>
 </mt:NoSearch>
+
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+    <mtml tag="mt:else">
+               <div class="related-content">
+        <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
+               </div>
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>    
             </div>
             <footer class="page-footer" data-role="footer" data-theme="a">
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
