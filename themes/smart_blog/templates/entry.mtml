@@ -35,7 +35,7 @@
 </mt:If>
 <mt:IfArchiveTypeEnabled archive_type="Category">
     <mt:If tag="EntryCategories">
-                                <li class="entry-categories"><__trans phrase="Category:"> <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></li>
+                                <li class="entry-categories"><__trans phrase="Category:"> <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></mt:EntryCategories></li>
     </mt:If>
 </mt:IfArchiveTypeEnabled>
 <mt:EntryIfTagged>

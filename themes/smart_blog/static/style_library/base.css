@@ -1,14 +1,10 @@
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
 /* - Elements */
-article {
-    margin-bottom: 2.62em;
-}
-
 h1, 
 h2, 
 h3, 
@@ -94,12 +90,22 @@ legend {
     display: none;
 }
 
+header, 
+footer, 
+section, 
+article, 
+aside, 
+nav, 
 figure {
-    margin: 1.62em 0;
+    display: block;
 }
 
-time {
-    font-size: 90%;
+article {
+    margin-bottom: 2.62em;
+}
+
+figure {
+    margin: 1.62em 0;
 }
 
 /* - Layout */
@@ -172,7 +178,7 @@ header a {
     margin: 0.62em auto;
 }
 .content-title {
-    margin: 0.62em 0;
+    margin: 0 0 0.62em;
 }
 
 
@@ -197,6 +203,7 @@ header a {
 }
 .entry-header time {
     margin: 0 0 0.62em;
+    font-size: 90%;
 }
 .entry-title {
     margin: 0 0 0.62em;
@@ -331,7 +338,6 @@ header a {
 #comments-open-text label {
     display: block;
     padding: 0.62em 9px 0;
-    font-size: 16px;
     font-weight: bold;
 }
 #comments-open-text textarea {
@@ -369,7 +375,6 @@ header a {
     position: absolute;
     top: 10px;
     left: 9px;
-    font-size: 16px;
     font-weight: bold;
 }
 #commenter-info li .required-icon {
