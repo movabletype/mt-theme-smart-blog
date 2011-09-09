@@ -6,7 +6,7 @@
         <mt:Entries limit="$entries_per_page" search_results="1">
         <li class="nav-item">
             <a href="<$mt:EntryPermalink$>">
-                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%b %d, %Y"$></time>
+                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
                 <div class="ui-li-heading">
             <mt:if tag="EntryTitle">
                 <$mt:EntryTitle$>
