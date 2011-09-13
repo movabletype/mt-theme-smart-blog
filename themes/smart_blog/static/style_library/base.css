@@ -114,6 +114,24 @@ legend {
     padding: 0 0.62em;
 }
 
+button, 
+.button { 
+    cursor: pointer;
+    overflow: visible;
+    display: inline-block;
+    outline: none;
+    margin:0 0.62em 0 0;
+    padding: 0.62em 1.62em;
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 header, 
 footer, 
 section, 
@@ -126,6 +144,10 @@ figure {
 
 article {
     margin-bottom: 2.62em;
+}
+
+.section {
+    margin: 1.62em 0;
 }
 
 figure {
@@ -200,6 +222,10 @@ footer {
     margin-top: -8px;    
 }
 
+.more-link {
+    text-align: right;
+}
+
 /* - Header */
 header {
     position: relative;
@@ -211,7 +237,7 @@ header a {
     width: 960px;
     margin: 0.62em auto;
 }
-content-title {
+.content-title {
     margin: 0 0 0.62em;
 }
 
@@ -319,7 +345,7 @@ content-title {
     margin: 1.62em 0;
 }
 .entry-footer {
-    margin-top: 1.62em;
+    margin-top: 2.62em;
     font-size: 90%;
 }
 .entry-footer ul {
@@ -342,6 +368,9 @@ content-title {
 /* - Feedback Comments */
 .feedback {
     margin: 1.62em 0 0.62em;
+}
+.system .feedback {
+    margin: 0 0 2.62em;
 }
 
 /* -- Comments */
@@ -387,7 +416,6 @@ content-title {
     margin-bottom: 0;
     border: solid;
     border-width: 0 0 1px;
-    font-size: 16px;
 }
 #comment-form-reply {
     margin-top: 0;
@@ -438,12 +466,12 @@ content-title {
     height: 20px;
     margin-top: -10px;
 }
-.feedback fieldset {
+.comments  fieldset {
     margin: 0 0 0.62em;
     padding: 0;
     border: 1px solid #000;
 }
-.feedback legend {
+.comments legend {
     display: none;
 }
 #comments-open-text label {
@@ -501,7 +529,7 @@ content-title {
     border: 0;
     background-color: transparent;
     border-radius: 0;
-    font-size: 16px;
+    font-size: 100%;
     box-shadow: none;
     -webkit-box-shadow: none;
     box-sizing: border-box;
@@ -510,10 +538,6 @@ content-title {
 #commenter-info li input[required] {
     padding-right: 2em;
 }
-#comment-preview {
-    margin: 0 0 0.62em;
-}
-
 
 /* - Content Navigation */
 .content-nav {
@@ -528,4 +552,12 @@ content-title {
 }
 .page-footer p {
     margin: 0.62em 0;
+}
+
+
+/* - Clearfix */
+.content:after {
+    content:'';
+    display:block;
+    clear:both;
 }

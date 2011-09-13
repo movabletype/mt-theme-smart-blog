@@ -206,6 +206,22 @@ acronym {
     border-color: #bfc5c8;
 }
 
+button, 
+.button { 
+    border: 1px solid #bfc5c8;
+    background-color: #e8ecef;
+    color: #000;
+}
+button:hover, 
+.button:hover { 
+    border-color: #7b7c7d;
+    background-color: #f3f3f3;
+    color: #2b2b2b;
+}
+button:active, 
+.button:active { 
+    background-color: #dcdddd;
+}
 
 header time {
     color: #9ea1a3;
@@ -221,7 +237,7 @@ header time {
 .comment, 
 #comment-greeting, 
 #comment-form-reply, 
-.feedback fieldset, 
+.comments fieldset, 
 #commenter-info li {
     border-color: #bfc5c8;
 }
@@ -236,8 +252,10 @@ header time {
     background: #939393 url(../../images/icon-close-white.png) no-repeat center;
     border-radius: 0 0.62em 0.62em 0;
 }
+button, 
+.button, 
 #comment-greeting, 
-.feedback fieldset, 
-.feedback .comment-preview {
+.comments fieldset, 
+.comments .comment-preview {
     border-radius: 0.62em;
 }

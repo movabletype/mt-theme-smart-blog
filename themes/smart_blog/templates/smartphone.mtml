@@ -7,13 +7,17 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-button,
-select, 
-textarea {
-    -webkit-appearance: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-box-sizing: border-box;
+
+/* - Elements */
+abbr,  
+acronym { 
+    cursor: normal;
+    border: 0;
+}
+abbr:after, 
+acronym:after { 
+    content: '(' attr(title) ')';
+    font-size: 90%;
 }
 
 
@@ -37,6 +41,19 @@ article img {
     float: none ! important;
     max-width: 100% ! important;
     height: auto ! important;
+}
+
+button,
+select, 
+textarea {
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+}
+
+.button {
+    padding: 0;
 }
 
 /* - Header */
@@ -119,7 +136,6 @@ article img {
     width: 100%;
     margin: 0.62em 0 0;
 }
-
 
 /* - Content Navigation */
 .content-nav .ui-btn {

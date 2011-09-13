@@ -20,9 +20,9 @@
 <$mt:Include module="<__trans phrase="Banner Header">"$>
             </header>
             <div class="content" data-role="content" data-theme="a">
-                <section id="comment-preview" class="feedback">
+                <section id="comment-preview" class="comments feedback">
                     <h1 class="title content-title"><__trans phrase="Previewing and edit your Comment"></h1>
-                    <article id="comment-<$mt:CommentID$>" class="feedback comment comment-preview<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
+                    <article id="comment-<$mt:CommentID$>" class="comment comment-preview<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
                         <h2 class="title comment-title"><mt:IfCommentParent><__trans phrase="[_1] replied to <a href="[_2]">comment from [_3]</a>" params="<$mt:CommentAuthorLink$>%%<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>%%<mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>"><mt:Else><$mt:CommentAuthorLink$></mt:IfCommentParent></h2>
 <$mt:CommentBody$>
                         <footer class="comment-footer">
