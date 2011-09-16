@@ -444,14 +444,14 @@ header a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 90%;
 }
 #comment-form-reply label {
     padding-left: 30px;
 }
-#comment-greeting .signin-link {
+#comment-greeting .signin-message {
     display: block;
     padding: 0.62em 9px;
+    line-height: normal;
     font-weight: bold;
     text-decoration: none;
 }

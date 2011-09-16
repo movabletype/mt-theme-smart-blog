@@ -1100,7 +1100,7 @@ function mtSignInOnClick(sign_in_element) {
             el = document.getElementById('comment-form-external-auth');
     }
     if (el)
-        el.innerHTML = '<span><__trans phrase="Signing in..." escape="js"> <img alt="<__trans phrase="Signing in...">" src="<$MTStaticWebPath$>images/indicator.white.gif" class="indicator"></span>';
+        el.innerHTML = '<p class="signin-message"><__trans phrase="Signing in..." escape="js"> <img alt="<__trans phrase="Signing in...">" src="<$MTStaticWebPath$>images/indicator.white.gif" class="indicator"></p>';
 
     mtClearUser(); // clear any 'anonymous' user cookie to allow sign in
     mtFetchUser('mtSetUserOrLogin');
@@ -1179,7 +1179,7 @@ function mtShowGreeting() {
 
     if ( u && u.is_authenticated ) {
         if ( u.is_banned ) {
-            phrase = '<p><__trans phrase="You do not have permission to comment on this blog. ([_1]Sign Out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js"></p>';
+            phrase = '<p class="signin-message"><__trans phrase="You do not have permission to comment on this blog. ([_1]Sign Out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js"></p>';
         } else {
             var user_link;
             if ( u.is_author ) {
@@ -1193,14 +1193,14 @@ function mtShowGreeting() {
                     user_link = u.name;
             }
             // TBD: supplement phrase with userpic if one is available.
-            phrase = '<p class="logged-in"><__trans phrase=" __NAME__ [_1][_2]" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();" class="signout-link">%%</a>" escape="js"></p>';
+            phrase = '<p class="logged-in signin-message"><__trans phrase=" __NAME__ [_1][_2]" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();" class="signout-link">%%</a>" escape="js"></p>';
             phrase = phrase.replace(/__NAME__/, user_link);
         }
     } else {
         if (reg_reqd) {
-            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
+            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link signin-message" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
         } else {
-            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
+            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link signin-message" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
         }
     }
     el.innerHTML = phrase;
