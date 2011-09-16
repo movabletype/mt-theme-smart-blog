@@ -132,6 +132,10 @@ button,
     -moz-box-sizing: border-box;
 }
 
+a img {
+    border: 0;
+}
+
 header, 
 footer, 
 section, 
@@ -224,6 +228,7 @@ footer {
 
 .more-link {
     text-align: right;
+    padding-right: 1.62em;
 }
 
 /* - Header */
@@ -233,6 +238,7 @@ header {
 header a {
     text-decoration: none;
 }
+
 .page-title {
     width: 960px;
     margin: 0.62em auto;
@@ -543,6 +549,10 @@ header a {
 .content-nav {
     margin: 1.62em 0;
 }
+.next-link {
+    float: right;
+    margin: 0;
+}
 
 
 /* - Footer */
@@ -556,6 +566,7 @@ header a {
 
 
 /* - Clearfix */
+.content-nav:after, 
 .content:after {
     content:'';
     display:block;

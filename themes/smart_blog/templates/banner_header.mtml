@@ -1,4 +1,12 @@
-<h1 class="title page-title"><a href="<$mt:BlogURL$>"><mt:BlogName></a></h1>
+<h1 class="title page-title">
+    <a href="<$mt:BlogURL$>">
+<mt:Assets tag="@SITE_LOGO" limit="1">
+        <img alt="<$mt:BlogName encode_html="1"$>" src="<$mt:AssetThumbnailURL$>" class="page-logo">
+<mt:Else>
+    <$mt:BlogName$>
+</mt:Assets>
+    </a>
+</h1>
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
 <div class="menu">
