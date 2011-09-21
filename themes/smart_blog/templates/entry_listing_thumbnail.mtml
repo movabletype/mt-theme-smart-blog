@@ -6,14 +6,18 @@
         <mt:Entries limit="$entries_per_page" search_results="1">
         <li class="nav-item has-thumb">
             <a href="<$mt:EntryPermalink$>">
-            <mt:EntryAssets type="image" lastn="1">
+            <mt:EntryAssets type="image" tag="@SITE_ENTRY_ICON" limit="1">
                 <img src="<mt:AssetThumbnailURL square="1" width="80">" class="thumb ui-li-thumb">
             <mt:Else>
-                <mt:Assets type="image" tag="@SITE_NO_IMAGE_ICON" limit="1">
-                <img src="<$mt:AssetThumbnailURL width="80" square="1"$>" alt="<__trans phrase="NO Image">" class="thumb ul-li-thumb">
+                <mt:EntryAssets type="image" limit="1">
+                <img src="<mt:AssetThumbnailURL square="1" width="80">" class="thumb ui-li-thumb">
                 <mt:Else>
+                    <mt:Assets type="image" tag="@SITE_NO_IMAGE_ICON" limit="1">
+                <img src="<$mt:AssetThumbnailURL width="80" square="1"$>" alt="<__trans phrase="NO Image">" class="thumb ul-li-thumb">
+                    <mt:Else>
                 <img src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/no-image.png" alt="<__trans phrase="No Image">" class="thumb ui-li-thumb">                
-                </mt:Assets>
+                    </mt:Assets>
+                </mt:EntryAssets>
             </mt:EntryAssets>
                 <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
                 <div class="ui-li-heading">

@@ -78,12 +78,20 @@ elements:
             label: Comment Detail
           comment_form:
             label: Comment Form
+          entry_listing:
+            label: Entry Listing
+          entry_listing_thumbnail:
+            label: Entry Listing (Thumbnail)
           entry_summary:
             label: Entry Summary
           html_head:
             label: HTML Head          
           html_head_mobile:
             label: HTML Head Mobile
+          page_listing:
+            label: Page Listing
+          page_listing_thumbnail:
+            label: Page Listing (Thumbnail)
           pagination_content_navigation:
             label: Pagination Content Navigation
           pagination_search_link:
@@ -110,14 +118,6 @@ elements:
         widget:
           category_archive_list:
             label: Category Archives
-          entry_listing:
-            label: Entry Listing
-          entry_listing_thumbnail:
-            label: Entry Listing (Thumbnail)
-          page_listing:
-            label: Page Listing
-          page_listing_thumbnail:
-            label: Page Listing (Thumbnail)
           search:
             label: Search
           syndication:
@@ -125,11 +125,6 @@ elements:
           tag_cloud:
             label: Tag Cloud
         widgetset:
-          main_index_content:
-            label: 'Main Index Content'
-            order: 1000
-            widgets:
-              - Entry Listing (Thumbnail)
           related_content:
             label: 'Related Content'
             order: 2000
