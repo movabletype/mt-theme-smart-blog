@@ -80,86 +80,60 @@
             <div class="content" data-role="content" data-theme="a">
 <mt:SetVarTemplate id="search_results" name="search_results">
     <mt:SearchResults>
-        <mt:IfUserAgent wants="SmartPhone">
-            <mt:SearchResultsHeader>
+        <mt:SearchResultsHeader>
                 <section class="main-content">
                     <h1 class="title content-title">
-                <mt:IfStraightSearch>
+            <mt:IfStraightSearch>
                         <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-                </mt:IfStraightSearch>
-                <mt:IfTagSearch>
+            </mt:IfStraightSearch>
+            <mt:IfTagSearch>
                         <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-                </mt:IfTagSearch>
+            </mt:IfTagSearch>
                     </h1>
-                    <nav class="index entry-listing">
+                    <nav class="widget index menu-content entry-listing">
                         <ul class="nav-list" data-role="listview">
-            </mt:SearchResultsHeader>
+        </mt:SearchResultsHeader>
                             <li class="nav-item">
                                 <a href="<$mt:EntryPermalink$>">
                                     <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
                                     <div class="ui-li-heading">
-            <mt:if tag="EntryTitle">
-                <$mt:EntryTitle$>
-            <mt:Else>
-                                        <__trans phrase="Untitled">
+        <mt:if tag="EntryTitle">
+            <$mt:EntryTitle$>
+        <mt:Else>
+            <__trans phrase="Untitled">
+        </mt:If>
+                                    </div>
+        <mt:If tag="EntryExcerpt">
+                                    <p class="entry-description ui-li-desc"><$mt:EntryExcerpt$></p>
+        </mt:If>
+        <mt:IfArchiveTypeEnabled archive_type="Category">
+            <mt:If tag="EntryCategories">
+                                    <div class="entry-meta entry-categories ui-li-desc">
+                                        <div class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></div>
+                                    </div>
             </mt:If>
-                                    </div>
-                                    <div class="meta ui-li-desc">
-                                        <span class="author">by <$mt:EntryAuthor$></span>
-            <mt:IfArchiveTypeEnabled archive_type="Category">
-                <mt:If tag="EntryCategories">
-                                        <span class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></span>
-                </mt:If>
-                                    </div>
-            </mt:IfArchiveTypeEnabled>
-            <mt:if tag="EntryCommentCount">
+        </mt:IfArchiveTypeEnabled>
+        <mt:if tag="EntryCommentCount">
                                     <div class="comments count ui-li-count"><$mt:EntryCommentCount$></div>
-            </mt:if>
+        </mt:if>
                                 </a>
                             </li>
 
-            <mt:SearchResultsFooter>
+        <mt:SearchResultsFooter>
                         </ul>
                     </nav>
-                <mt:If name="has_content_nav">
+            <mt:If name="has_content_nav">
                     <nav class="content-nav" data-role="controlgroup" data-type="horizontal">
-                <mt:IfPreviousResults>
-                        <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev" data-role="button"><__trans phrase="Previous"></a>
-                </mt:IfPreviousResults>
-                <mt:IfMoreResults>
-                        <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next" data-role="button"><__trans phrase="Next"></a>
-                </mt:IfMoreResults>
+            <mt:IfPreviousResults>
+                        <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev-link button" data-role="button"><__trans phrase="Previous"></a>
+            </mt:IfPreviousResults>
+            <mt:IfMoreResults>
+                        <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next-link button" data-role="button"><__trans phrase="Next"></a>
+            </mt:IfMoreResults>
                     </nav>
-                </mt:If>
+            </mt:If>
                 </section>
-            </mt:SearchResultsFooter>
-        <mt:Else>
-            <mt:SearchResultsHeader>
-                <section class="main-content">
-                    <h1 class="title content-title">
-                <mt:IfStraightSearch>
-                        <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-                </mt:IfStraightSearch>
-                <mt:IfTagSearch>
-                        <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
-                </mt:IfTagSearch>
-                    </h1>
-            </mt:SearchResultsHeader>
-            <$mt:Include module="<__trans phrase="Entry Summary">"$>
-            <mt:SearchResultsFooter>
-                <mt:If name="has_content_nav">
-                    <nav class="content-nav" data-role="controlgroup" data-type="horizontal">
-                <mt:IfPreviousResults>
-                        <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev" data-role="button"><__trans phrase="Previous"></a>
-                </mt:IfPreviousResults>
-                <mt:IfMoreResults>
-                        <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next" data-role="button"><__trans phrase="Next"></a>
-                </mt:IfMoreResults>
-                    </nav>
-                </mt:If>
-                </section>
-            </mt:SearchResultsFooter>
-        </mt:IfUserAgent>
+        </mt:SearchResultsFooter>
     </mt:SearchResults>
 </mt:SetVarTemplate>
 

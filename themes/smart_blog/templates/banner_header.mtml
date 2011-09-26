@@ -18,7 +18,7 @@
             <li data-tab="menu-tags" class="tab"><__trans phrase="Tags"></li>
         </ul>
 
-        <div id="menu-search" class="menu-content" data-role="fieldcontain">
+        <div id="menu-search" class="widget menu-content" data-role="fieldcontain">
             <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
                 <input type="search" name="search" id="search" class="text search" placeholder="<__trans phrase="Keyword">" value="<$mt:SearchString$>" />
 <mt:If name="search_results">
@@ -31,7 +31,7 @@
         </div>
 
 <mt:IfArchiveTypeEnabled archive_type="Category">
-        <nav id="menu-cat" class="menu-content">
+        <nav id="menu-cat" class="widget menu-content">
     <mt:TopLevelCategories>
         <mt:SubCatIsFirst>
             <ul>
@@ -58,7 +58,7 @@
 
 <mt:Tags>
     <mt:if name="__first__">
-        <nav id="menu-tags" class="menu-content">
+        <nav id="menu-tags" class="widget menu-content">
             <ul>
     </mt:if>
                 <li class="nav-item">

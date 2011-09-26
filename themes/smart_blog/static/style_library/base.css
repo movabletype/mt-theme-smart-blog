@@ -225,10 +225,10 @@ footer {
     top: 50%;
     margin-top: -8px;    
 }
-
-.more-link {
-    text-align: right;
-    padding-right: 1.62em;
+.widget .more-link {
+    display: block;
+    padding: 10px 9px;
+    margin: 0 -10px;
 }
 
 /* - Header */
@@ -248,9 +248,13 @@ header a {
 }
 
 
-/* - Menu */
-.menu-content {
+/* - Widget */
+.widget {
+    margin-bottom: 2.62em;
     padding: 0;
+}
+.menu-content {
+    margin: 0;
 }
 #menu-search {
     margin: 0;
@@ -261,63 +265,58 @@ header a {
     -webkit-box-sizing: border-box;
 }
 
-.menu-content ul {
+.widget ul {
     margin: 0;
     padding: 0;
 }
-.menu-content > ul {
+.widget > ul {
     border-width: 0 0 1px;
     border-style: solid;
 }
-.menu-content .nav-item { 
+.widget .nav-item { 
     margin: 0;
     list-style-type: none;
     border-width: 1px 0 0;
     border-style: solid;
 }
-.menu-content .nav-item a, 
-.menu-content .nav-item > span {
+.widget .nav-item a, 
+.widget .nav-item > span {
     position: relative;
     display: block;
-    padding: 10px 80px 10px 9px;
+    padding: 10px 40px 10px 9px;
     text-decoration: none;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
-.menu-content .nav-item li a, 
-.menu-content .nav-item li > span {
+.widget .nav-item li a, 
+.widget .nav-item li > span {
     padding-left: 1em;
 }
-.menu-content .nav-item li li a, 
-.menu-content .nav-item li li > span {
+.widget .nav-item li li a, 
+.widget .nav-item li li > span {
     padding-left: 2em;
 }
-.menu-content .nav-item li li li a, 
-.menu-content .nav-item li li li > span {
+.widget .nav-item li li li a, 
+.widget .nav-item li li li > span {
     padding-left: 3em;
 }
-.menu-content .nav-item li li li li a, 
-.menu-content .nav-item li li li li > span {
+.widget .nav-item li li li li a, 
+.widget .nav-item li li li li > span {
     padding-left: 4em;
 }
-.menu-content .nav-item li li li li li a, 
-.menu-content .nav-item li li li li li > span {
+.widget .nav-item li li li li li a, 
+.widget .nav-item li li li li li > span {
     padding-left: 5em;
 }
-.menu-content .nav-item li li li li li li a, 
-.menu-content .nav-item li li li li li li > span {
+.widget .nav-item li li li li li li a, 
+.widget .nav-item li li li li li li > span {
     padding-left: 6em;
 }
-.menu-content .nav-item .count {
+.nav-item .count {
+    right: 9px;
+}
+.menu .widget .nav-item .count {
     right: 25px;
 }
-
-.widget {
-    margin-bottom: 2.62em;
-}
-
 
 
 /* - Banner */
@@ -368,6 +367,10 @@ header a {
 .entry-footer address {
     display: inline;
     font-style: normal;
+}
+.entry-meta div {
+    display: inline;
+    margin-right: 1em;
 }
 
 

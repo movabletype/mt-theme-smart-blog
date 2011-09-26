@@ -129,29 +129,29 @@ a:hover {
     color: #fff;
 }
 .tab.active, 
-.menu .menu-content {
+.menu .widget {
     background-color: #fff;
     color: #000;
 }
-.menu-content > ul,
-.menu-content .nav-item { 
+.widget > ul,
+.widget .nav-item { 
     border-color: #bfc5c8;
 }
-.menu .menu-content > ul,
-.menu .menu-content .nav-item { 
+.menu .widget > ul,
+.menu .widget .nav-item { 
     border-color: #38a1db;
 }
-.menu-content .nav-item a {
+.menu .widget .nav-item a {
     color: #000;
 }
-.menu-content .nav-item a:hover {
+.menu .widget .nav-item a {
+    background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
+}
+.nav-item a:hover {
     background-color: #f3f3f3;
 }
-.menu-content .nav-item > span {
+.nav-item > span {
     color: #9ea1a3;
-}
-.menu-content .nav-item a {
-    background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
 }
 
 .count {
