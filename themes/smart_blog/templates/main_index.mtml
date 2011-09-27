@@ -1,4 +1,4 @@
-<$mt:Var name="entries_per_page" value="10"$>
+<$mt:Var name="entries_per_page" value="5"$>
 <mt:SetVarBlock name="search_link">
     <$mt:CGIPath$><$mt:SearchScript$>?IncludeBlogs=<$mt:BlogID$>
     &template_id=<$mt:BuildTemplateID$>
@@ -18,10 +18,10 @@
         <mt:Ignore><!-- for Other --></mt:Ignore>
         <$mt:Include module="<__trans phrase="HTML Head">"$>
     <mtml tag="/mt:IfUserAgent">
-</mt:BuildRecurs>    
         <title><$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="main-index">
+</mt:BuildRecurs>
         <div class="container" data-role="page" data-theme="a">
             <header class="page-header" data-role="header">
 <$mt:Include module="<__trans phrase="Banner Header">"$>

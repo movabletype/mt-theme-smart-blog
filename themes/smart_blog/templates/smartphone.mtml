@@ -65,17 +65,13 @@ textarea {
     overflow: visible ! important;
 }
 
-.page-title {
-    display: block;
-    width: auto;
-    margin: 0.62em 90px;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.ui-header .ui-title,
+.ui-footer .ui-title {
+    margin: .8em 90px;
 }
-
+.page-title {
+    width: auto;
+}
 .page-logo {
     max-width: 100% ! important;
 }
@@ -86,7 +82,7 @@ textarea {
 }
 
 
-/* - Menu */
+/* - Menu, Widget */
 .menu .detail-link {
     width: 36px;
     height: 100%;
@@ -103,6 +99,10 @@ textarea {
 .menu-content > ul, 
 .menu-content > ul > .nav-item:first-child { 
     border: 0;
+}
+
+.widget {
+    margin: 0;
 }
 
 .widget-title {
@@ -133,22 +133,22 @@ textarea {
 .ui-content .ui-listview-inset {
     margin: 1em 0;
 }
-.nav-item time {
-    position: absolute;
-    top: 10px;
-    right: 35px;
-}
-.nav-item .thumb {
-    float: none;
-    top: 50%;
-    margin-top: -40px;
-}
 .nav-item .count {
     right: 38px;
 }
-.nav-item .entry-meta {
-    margin-top: 0;
+.nav-item .entry-title {
+    font-size: 100%;
 }
+.nav-item .thumb {
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+}
+.widget .has-thumb a {
+    min-height: 60px;
+    padding-left: 100px;
+}
+
 
 /* - Article */
 .entry-header {

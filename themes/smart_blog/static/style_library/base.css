@@ -218,18 +218,15 @@ footer {
 
 .count {
     display: inline-block;
-    padding: 0 0.62em;
-}
-.nav-item .count {
-    position: absolute;
-    top: 50%;
-    margin-top: -8px;    
+    padding: 2px 0.62em;
+    line-height: 1;
 }
 .widget .more-link {
     display: block;
     padding: 10px 9px;
     margin: 0 -10px;
 }
+
 
 /* - Header */
 header {
@@ -274,6 +271,7 @@ header a {
     border-style: solid;
 }
 .widget .nav-item { 
+    position: relative;
     margin: 0;
     list-style-type: none;
     border-width: 1px 0 0;
@@ -281,9 +279,8 @@ header a {
 }
 .widget .nav-item a, 
 .widget .nav-item > span {
-    position: relative;
     display: block;
-    padding: 10px 40px 10px 9px;
+    padding: 10px 9px;
     text-decoration: none;
 }
 
@@ -312,10 +309,23 @@ header a {
     padding-left: 6em;
 }
 .nav-item .count {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;    
     right: 9px;
 }
 .menu .widget .nav-item .count {
     right: 25px;
+}
+.widget .has-thumb a {
+    min-height: 100px;
+    padding-left: 130px;
+}
+.nav-item .thumb {
+    position: absolute;
+    float: none;
+    left: 9px;
+    top: 10px;
 }
 
 
@@ -341,7 +351,6 @@ header a {
 .entry-header time {
     display: inline-block;
     margin: 0 0 0.62em;
-    font-size: 90%;
 }
 .entry-title {
     margin: 0 0 0.62em;
