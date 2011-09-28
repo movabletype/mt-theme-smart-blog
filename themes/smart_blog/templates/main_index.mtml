@@ -1,4 +1,5 @@
 <$mt:Var name="entries_per_page" value="5"$>
+
 <mt:SetVarBlock name="search_link">
     <$mt:CGIPath$><$mt:SearchScript$>?IncludeBlogs=<$mt:BlogID$>
     &template_id=<$mt:BuildTemplateID$>
@@ -6,47 +7,88 @@
     &archive_type=Index
     &page=
 </mt:SetVarBlock>
+
 <$mt:Var name="search_link" strip="" trim="1" setvar="search_link"$>
+
 <!DOCTYPE html>
 <html>
     <head>
+
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+
         <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
         <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+
     <mtml tag="mt:else">
+
         <mt:Ignore><!-- for Other --></mt:Ignore>
         <$mt:Include module="<__trans phrase="HTML Head">"$>
+
     <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>
+
         <title><$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="main-index">
-</mt:BuildRecurs>
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
+
 <mt:Assets tag="@SITE_BANNER" limit="1">
             <div class="banner">
-                <img src="<$mt:AssetThumbnailURL width="1024"$>">
+                <div class="banner-inner inner">
+                    <img src="<$mt:AssetThumbnailURL width="1024"$>">
+                </div>
             </div>
 </mt:Assets>
-            <div class="content" data-role="content" data-theme="a">
-                <div class="main-content">
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+
+                    <div class="main-content">
+
+<mt:Ignore><!-- Main Content --></mt:Ignore>
 <$mt:Include module="<__trans phrase="Entry Listing">"$>
-                </div>
+
+                    </div>
+
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mtml tag="mt:else">
-               <div class="related-content">
+                   <div class="related-content">
+<mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
-               </div>
+                   </div>
     <mtml tag="/mt:IfUserAgent">
 </mt:BuildRecurs>    
+
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer" data-theme="a">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {

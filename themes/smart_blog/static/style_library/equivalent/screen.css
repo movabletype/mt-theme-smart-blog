@@ -7,6 +7,7 @@ designer_url: http://www.sixapart.jp/
 */
 
 body {
+    color: #2F3E46;
     font-family: sans-serif;
 }
 
@@ -52,10 +53,6 @@ fieldset {
 abbr, 
 acronym { 
     border-color: #bfc5c8;
-}
-
-time {
-    color: #9ea1a3;
 }
 
 /* - Button */
@@ -130,7 +127,7 @@ button:active,
 
 /* - Entry */
 .entry-title {
-    font-size: 1.62em;
+    font-size: 130%;
     font-weight: bold;
 }
 .entry-title a:hover {
@@ -210,11 +207,11 @@ a:hover {
 }
 .ui-header {
     padding: 1px 0 0;
-    border-bottom: 1px solid #fff;
+
 }
 
 .ui-body-a {
-    color: #000;
+    color: #2F3E46;
     background: #fff;
     text-shadow: none;
 }
@@ -226,7 +223,7 @@ a:hover {
     font-family: Helvetica, Arial, sans-serif;
 }
 .ui-body-a .ui-link-inherit {
-    color: #000;
+    color: #2F3E46;
 }
 
 .ui-content {

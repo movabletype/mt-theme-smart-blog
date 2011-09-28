@@ -1,0 +1,72 @@
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+<div class="menu">
+
+    <span class="toggle-button detail-link toggle-trigger"></span>
+
+    <div id="menu-tabs" class="detail">
+
+        <ul class="tabs">
+            <li data-tab="menu-search" class="tab"><__trans phrase="Search"></li>
+            <li data-tab="menu-cat" class="tab"><__trans phrase="Categories"></li>
+            <li data-tab="menu-tags" class="tab"><__trans phrase="Tags"></li>
+        </ul>
+
+        <div id="menu-search" class="widget menu-content" data-role="fieldcontain">
+            <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
+                <input type="search" name="search" id="search" class="text search" placeholder="<__trans phrase="Keyword">" value="<$mt:SearchString$>" />
+        <mt:If name="search_results">
+                <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+        <mt:Else>
+                <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+        </mt:If>
+                <input type="hidden" name="limit" value="10" />
+            </form>
+        </div>
+
+        <mt:IfArchiveTypeEnabled archive_type="Category">
+        <nav id="menu-cat" class="widget menu-content">
+            <mt:TopLevelCategories>
+                <mt:SubCatIsFirst>
+            <ul>
+                </mt:SubCatIsFirst>
+                <mt:If tag="CategoryCount">
+                <li class="nav-item">
+                    <a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>>
+                        <__trans phrase="[_1] <span class="count">[_2]</span>" params="<$mt:CategoryLabel$>%%<$mt:CategoryCount$>">
+                    </a>
+                <mt:Else>
+                    <li class="nav-item">
+                        <span><$mt:CategoryLabel$></span>
+                </mt:If>
+                <$mt:SubCatsRecurse$>
+                </li>
+                <mt:SubCatIsLast>
+            </ul>
+                </mt:SubCatIsLast>
+            </mt:TopLevelCategories>
+        </nav>
+        </mt:IfArchiveTypeEnabled>
+
+        <mt:Tags>
+            <mt:if name="__first__">
+        <nav id="menu-tags" class="widget menu-content">
+            <ul>
+            </mt:if>
+                <li class="nav-item">
+                    <a href="<$mt:TagSearchLink$>"><$mt:TagName$><span class="count"><$mt:TagCount$></span></a>
+                </li>
+            <mt:if name="__last__">
+            </ul>
+        </nav>
+            </mt:if>
+        </mt:Tags>
+
+    </div>
+
+</div>
+    <mtml tag="mt:Else">
+        <mt:Include module="<__trans phrase="Page Navigation">">
+        <mt:Include widget="<__trans phrase="Search">">
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>

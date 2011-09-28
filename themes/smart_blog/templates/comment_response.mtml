@@ -8,14 +8,17 @@
     <$mt:Var name="page_title" value="<__trans phrase="Comment Submission Error">"$>
     <mt:SetVarBlock name="message"><p class="message error"><__trans phrase="Your comment submission failed for the following reasons: [_1]" params="<$mt:ErrorMessage$>"></p></mt:SetVarBlock>
 </mt:If>
+
 <!DOCTYPE html>
 <html>
     <head>
+
 <mt:IfUserAgent wants="SmartPhone">
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
 <mt:Else>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
 </mt:IfUserAgent>
+
         <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Previewing your Comment"></title>
         <script type="text/javascript">
             var user = <$mt:UserSessionState$>;
@@ -23,20 +26,45 @@
         </script>
     </head>
     <body class="system">
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header"> 
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content" data-theme="a">        
-                <section id="comment-response" class="comments feedback">
-                    <h1 class="title content-title"><$mt:Var name="page_title"$></h1>
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+                    <section id="comment-response" class="comments feedback">
+                        <h1 class="title content-title"><$mt:Var name="page_title"$></h1>
 <$mt:Var name="message"$>
-                    <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
-                </section>
+                        <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
+                    </section>
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer" data-theme="a">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {

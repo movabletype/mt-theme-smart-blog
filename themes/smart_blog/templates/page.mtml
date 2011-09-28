@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
 <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mt:DynamicMTML>
         <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
@@ -10,26 +11,58 @@
     <mt:Ignore><!-- for Other --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
 <mtml tag="/mt:IfUserAgent">
+
         <title><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="individual webpage">
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content">
-                <article id="page-<$mt:PageID$>">
-                    <header title="entry-title">
-                        <h1 class="title entry-title"><$mt:PageTitle$></h1>
-                    </header>
+
+            <div class="content" data-role="content" data-theme="a">
+                <div class="content-inner inner">
+    
+                    <article id="page-<$mt:PageID$>" class="page">
+
+                        <header title="entry-title">
+                            <h1 class="title entry-title"><$mt:PageTitle$></h1>
+                        </header>
+                        
+                        <div class="entry-content">                        
 <$mt:PageBody$>
 <$mt:PageMore$>
-                </article>
+                        </div>
+
 <mt:Include module="<__trans phrase="Comments">">
+
+                    </article>
+
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer">
-<mt:Include module="<__trans phrase="Banner Footer">">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {

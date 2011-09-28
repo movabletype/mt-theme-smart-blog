@@ -1,13 +1,16 @@
 <mt:IfPreviousResults><mt:setvar name="has_content_nav" value="1"></mt:IfPreviousResults>
 <mt:IfMoreResults><mt:setvar name="has_content_nav" value="1"></mt:IfMoreResults>
+
 <!DOCTYPE html>
 <html>
     <head>
+
 <mt:IfUserAgent wants="SmartPhone">
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
 <mt:Else>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
 </mt:IfUserAgent>
+
         <script type="text/javascript">
         /* <![CDATA[ */
             var user = <$mt:UserSessionState$>;
@@ -73,66 +76,89 @@
         </script>
     </head>
     <body class="search-result entry-index">
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content" data-theme="a">
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+
 <mt:SetVarTemplate id="search_results" name="search_results">
     <mt:SearchResults>
         <mt:SearchResultsHeader>
-                <section class="main-content">
-                    <h1 class="title content-title">
+                    <section class="main-content">
+                        <h1 class="title content-title">
             <mt:IfStraightSearch>
-                        <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                            <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfStraightSearch>
             <mt:IfTagSearch>
-                        <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                             <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfTagSearch>
-                    </h1>
-                    <nav class="widget index entry-listing">
-                        <ul class="nav-list" data-role="listview">
+                        </h1>
+                        <nav class="widget index entry-listing">
+                            <ul class="nav-list" data-role="listview">
         </mt:SearchResultsHeader>
-                            <li class="nav-item">
-                                <a href="<$mt:EntryPermalink$>">
-                                    <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
-                                    <div class="ui-li-heading">
+
+                                <mt:Include module="<__trans phrase="Entry Summary">">
+
+<mt:Ignore>
+                                <li class="nav-item">
+                                    <a href="<$mt:EntryPermalink$>">
+                                        <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
+                                        <div class="ui-li-heading">
         <mt:if tag="EntryTitle">
             <$mt:EntryTitle$>
         <mt:Else>
             <__trans phrase="Untitled">
         </mt:If>
-                                    </div>
+                                        </div>
         <mt:If tag="EntryExcerpt">
-                                    <p class="entry-description ui-li-desc"><$mt:EntryExcerpt$></p>
+                                        <p class="entry-description ui-li-desc"><$mt:EntryExcerpt$></p>
         </mt:If>
         <mt:IfArchiveTypeEnabled archive_type="Category">
             <mt:If tag="EntryCategories">
-                                    <div class="entry-meta entry-categories ui-li-desc">
-                                        <div class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></div>
-                                    </div>
+                                        <div class="entry-meta entry-categories ui-li-desc">
+                                            <div class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></div>
+                                        </div>
             </mt:If>
         </mt:IfArchiveTypeEnabled>
-        <mt:if tag="EntryCommentCount">
-                                    <div class="comments count ui-li-count"><$mt:EntryCommentCount$></div>
-        </mt:if>
-                                </a>
-                            </li>
+                                    </a>
+                                </li>
+</mt:Ignore>
 
         <mt:SearchResultsFooter>
-                        </ul>
-                    </nav>
+                            </ul>
+                        </nav>
+
             <mt:If name="has_content_nav">
-                    <nav class="content-nav" data-role="controlgroup" data-type="horizontal">
+                        <nav class="content-nav" data-role="controlgroup" data-type="horizontal">
             <mt:IfPreviousResults>
-                        <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev-link button" data-role="button"><__trans phrase="Previous"></a>
+                            <a rel="prev" href="<$mt:PreviousLink$>" onclick="return swapContent(-1);" class="prev-link button" data-role="button"><__trans phrase="Previous"></a>
             </mt:IfPreviousResults>
             <mt:IfMoreResults>
-                        <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next-link button" data-role="button"><__trans phrase="Next"></a>
+                            <a rel="next" href="<$mt:NextLink$>" onclick="return swapContent();" class="next-link button" data-role="button"><__trans phrase="Next"></a>
             </mt:IfMoreResults>
-                    </nav>
+                        </nav>
             </mt:If>
-                </section>
+
+                    </section>
         </mt:SearchResultsFooter>
     </mt:SearchResults>
 </mt:SetVarTemplate>
@@ -140,42 +166,49 @@
 <$mt:Var name="search_results"$>
 
 <mt:NoSearchResults>
-                <section class="main-content">
-                    <h1 class="title content-title">
+                    <div class="main-content">
+                        <h1 class="title content-title">
     <mt:IfStraightSearch>
-                        <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                            <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
     </mt:IfStraightSearch>
     <mt:IfTagSearch>
-                        <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                            <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
     </mt:IfTagSearch>
-                    </h1>
-                    <p><__trans phrase="No results found for &ldquo;[_1]&rdquo;." params="<$mt:SearchString$>"></p>
-                </section>
+                        </h1>
+                        <p><__trans phrase="No results found for &ldquo;[_1]&rdquo;." params="<$mt:SearchString$>"></p>
+                    </div>
 </mt:NoSearchResults>
 
 <mt:NoSearch>
-                <section class="main-content">
-                    <h1 id="title content-title" class="search-results-header"><__trans phrase="Instructions"></h1>
-                    <p><__trans phrase="By default, this search engine looks for all words in any order. To search for an exact phrase, enclose the phrase in quotes:"></p>
-                    <pre><code>"<__trans phrase="movable type">"</code></pre>
-                    <p><__trans phrase="The search engine also supports AND, OR, and NOT keywords to specify boolean expressions:"></p>
-                    <pre><code><__trans phrase="personal OR publishing"></code></pre>
-                    <pre><code><__trans phrase="publishing NOT personal"></code></pre>
-                </section>
+                    <div class="main-content">
+                        <h1 id="title content-title" class="search-results-header"><__trans phrase="Instructions"></h1>
+                        <p><__trans phrase="By default, this search engine looks for all words in any order. To search for an exact phrase, enclose the phrase in quotes:"></p>
+                        <pre><code>"<__trans phrase="movable type">"</code></pre>
+                        <p><__trans phrase="The search engine also supports AND, OR, and NOT keywords to specify boolean expressions:"></p>
+                        <pre><code><__trans phrase="personal OR publishing"></code></pre>
+                        <pre><code><__trans phrase="publishing NOT personal"></code></pre>
+                    </div>
 </mt:NoSearch>
 
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mtml tag="mt:else">
-               <div class="related-content">
+                    <div class="related-content">
+<mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
-               </div>
+                    </div>
     <mtml tag="/mt:IfUserAgent">
-</mt:BuildRecurs>    
+</mt:BuildRecurs>
+
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer" data-theme="a">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {

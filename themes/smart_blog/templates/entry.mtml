@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
 <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mt:DynamicMTML>
         <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
@@ -8,77 +9,108 @@
 <mtml tag="mt:else">
     <$mt:Include module="<__trans phrase="HTML Head">"$>
 <mtml tag="/mt:IfUserAgent">
+
 <mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
 <mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
+
         <title><$mt:EntryTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="individual">
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content">
-                <div class="main-content">
-                    <article id="entry-<$mt:EntryID$>">
-                        <header class="entry-header">
-                            <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
-                            <h1 class="title entry-title"><$mt:EntryTitle$></h1>
-                        </header>
-                        <div class="entry-content">                        
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+
+                    <div class="main-content">
+
+<mt:Ignore><!-- Main Content --></mt:Ignore>
+                        <article id="entry-<$mt:EntryID$>" class="entry">
+
+                            <header class="entry-header">
+                                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
+                                <h1 class="title entry-title"><$mt:EntryTitle$></h1>
+                            </header>
+
+                            <div class="entry-content">                        
 <$mt:EntryBody$>
 <$mt:EntryMore$>
-                        </div>
-                        <footer class="entry-footer">
-                            <ul class="entry-meta">
+                            </div>
+
+                            <footer class="entry-footer">
+                                <ul class="entry-meta">
 <mt:If tag="EntryAuthorDisplayName">
-                                <li class="author"><__trans phrase="Author:"> <address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></li>
+                                    <li class="author"><__trans phrase="Author:"> <address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></li>
 </mt:If>
 <mt:IfArchiveTypeEnabled archive_type="Category">
     <mt:If tag="EntryCategories">
-                                <li class="entry-categories"><__trans phrase="Category:"> <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></mt:EntryCategories></li>
+                                    <li class="entry-categories"><__trans phrase="Category:"> <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></mt:EntryCategories></li>
     </mt:If>
 </mt:IfArchiveTypeEnabled>
 <mt:EntryIfTagged>
-                                <li class="entry-tags"><__trans phrase="Tags:"> <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></mt:EntryTags></li>
+                                    <li class="entry-tags"><__trans phrase="Tags:"> <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></mt:EntryTags></li>
 </mt:EntryIfTagged>
-                            </ul>
-                        </footer>
-                        <nav class="content-nav entry-nav" data-role="controlgroup" data-type="horizontal">
+                                </ul>
+                            </footer>
+
+                            <nav class="content-nav entry-nav" data-role="controlgroup" data-type="horizontal">
 <mt:EntryPrevious>
-                            <a rel="prev" href="<$mt:EntryPermalink$>" class="prev-link button" data-role="button">Prev</a>
+                                <a rel="prev" href="<$mt:EntryPermalink$>" class="prev-link button" data-role="button">Prev</a>
 </mt:EntryPrevious>
 <mt:EntryNext>
-                            <a rel="next" href="<$mt:EntryPermalink$>" class="next-link button" data-role="button">Next</a>
+                                <a rel="next" href="<$mt:EntryPermalink$>" class="next-link button" data-role="button">Next</a>
 </mt:EntryNext>
-                        </nav>
+                            </nav>
+
 <mt:Include module="<__trans phrase="Comments">">
-                    </article>
-                </div>
+
+                        </article>
+
+                    </div>
+
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mtml tag="mt:else">
-                <div class="related-content">
+                    <div class="related-content">
+<mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
-                </div>
+                    </div>
     <mtml tag="/mt:IfUserAgent">
 </mt:BuildRecurs>
+
+                </div>
             </div>
 
-            <footer class="page-footer" data-role="footer">
-<mt:Include module="<__trans phrase="Banner Footer">">
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
+
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {
             jQuery('.menu').mtToggleField();
-            jQuery('.title.entry').bind('swipeleft', function(){
-                var prevurl = jQuery('.prev-link').attr('href');
-                window.location = prevurl;
-            });
-            jQuery('.title.entry').bind('swiperight', function(){
-                var nexturl = jQuery('.next-link').attr("href");
-                window.location = nexturl;
-            });
         });
         </script>
     </body>

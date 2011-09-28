@@ -1,11 +1,12 @@
-        <div id="menu-search" class="menu-content" data-role="fieldcontain">
-            <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
-                <input type="search" name="search" id="search" class="text search" placeholder="<__trans phrase="Keyword">" value="<$mt:SearchString$>" />
+<div id="menu-search" class="widget">
+    <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
+        <input type="search" name="search" id="search" class="text search" placeholder="<__trans phrase="Keyword">" value="<$mt:SearchString$>">
 <mt:If name="search_results">
-                <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+        <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>">
 <mt:Else>
-                <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+        <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>">
 </mt:If>
-                <input type="hidden" name="limit" value="10" />
-            </form>
-        </div>
+        <input type="hidden" name="limit" value="10">
+        <input type="submit" class="search-submit" value="<__trans phrase="Search">">
+    </form>
+</div>

@@ -1,61 +1,10 @@
-<mt:Setvar name="advanced" value="1">
 <nav class="widget index entry-listing">
     <ul class="nav-list" data-role="listview" data-theme="a">
 <mt:Entries limit="$entries_per_page" search_results="1">
-    <mt:If name="advanced">
-            <mt:Ignore><!-- Advanced Entry List --></mt:Ignore>
-        <li class="nav-item has-thumb">
-            <a href="<$mt:EntryPermalink$>">
-                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
-                <div class="ui-li-heading entry-title">
-        <mt:if tag="EntryTitle">
-            <$mt:EntryTitle$>
-        <mt:Else>
-            <__trans phrase="Untitled">
-        </mt:If>
-                </div>
-        <mt:EntryAssets type="image" tag="@SITE_ENTRY_ICON" limit="1">
-                <img src="<$mt:AssetThumbnailURL height="100" square="1"$>" class="thumb ui-li-thumb">
-        <mt:Else>
-            <mt:EntryAssets type="image" limit="1">
-                <img src="<$mt:AssetThumbnailURL height="100" square="1"$>" class="thumb ui-li-thumb">
-            <mt:Else>
-                <mt:Assets type="image" tag="@SITE_NO_IMAGE_ICON" limit="1">
-                <img src="<$mt:AssetThumbnailURL height="100" square="1"$>" alt="<__trans phrase="NO Image">" class="thumb ul-li-thumb">
-                <mt:Else>
-                <img src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/no-image.png" alt="<__trans phrase="No Image">" class="thumb ui-li-thumb">                
-                </mt:Assets>
-            </mt:EntryAssets>
-        </mt:EntryAssets>
-        <mt:If tag="EntryExcerpt">
-                <p class="entry-description ui-li-desc"><$mt:EntryExcerpt$></p>
-        </mt:If>
-        <mt:IfArchiveTypeEnabled archive_type="Category">
-            <mt:If tag="EntryCategories">
-                <div class="entry-meta entry-categories ui-li-desc">
-                    <div class="entry-categories">in <mt:EntryCategories glue=", "><$mt:CategoryLabel$></mt:EntryCategories></div>
-                </div>
-            </mt:If>
-        </mt:IfArchiveTypeEnabled>
-            </a>
-        </li>
-    <mt:Else>
-        <mt:Ignore><!-- Entry List --></mt:Ignore>
-        <li class="nav-item">
-            <a href="<$mt:EntryPermalink$>">
-                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
-                <div class="ui-li-heading">
-        <mt:if tag="EntryTitle">
-            <$mt:EntryTitle$>
-        <mt:Else>
-            <__trans phrase="Untitled">
-        </mt:If>
-                </div>
-            </a>
-        </li>
-    </mt:If>
+
+    <mt:Include module="<__trans phrase="Entry Summary">">
+
 </mt:Entries>
     </ul>
 </nav>
-
 <$mt:Include module="<__trans phrase="Pagination Content Navigation">"$>

@@ -158,11 +158,16 @@ figure {
     margin: 1.62em 0;
 }
 
+time {
+    font-weight: normal;
+}
+
+
 /* - Layout */
-.content {
-    width: 960px;
-    margin: 1.62em auto;
-    padding: 0 10px;
+.content, 
+.page-header, 
+.page-footer { 
+    padding: 1px 10px;
 }
 
 .main-content {
@@ -170,20 +175,18 @@ figure {
     width: 640px;
     overflow: hidden;
 }
-
 .related-content {
     float: right;
     width: 280px;
     margin-left: 10px;
 }
 
-.page-header,
-.page-footer {
-    padding: 1px 10px;
+.inner {
+    width: 960px;
+    margin: 0 auto;
 }
-
-footer {
-    clear: both;
+.content-inner {
+    margin: 1.62em auto;
 }
 
 
@@ -235,10 +238,8 @@ header {
 header a {
     text-decoration: none;
 }
-
-.page-title {
-    width: 960px;
-    margin: 0.62em auto;
+.header-menu {
+    margin: 0 -10px;
 }
 .content-title {
     margin: 0 0 0.62em;
@@ -250,18 +251,20 @@ header a {
     margin-bottom: 2.62em;
     padding: 0;
 }
-.menu-content {
-    margin: 0;
+.widget-title {
+    margin-top: 0;
 }
 #menu-search {
     margin: 0;
     padding: 0.62em;
 }
+.header-menu #menu-search {
+    float: right;
+}
 #menu-search .ui-input-search {
     width: 100%;
     -webkit-box-sizing: border-box;
 }
-
 .widget ul {
     margin: 0;
     padding: 0;
@@ -327,6 +330,12 @@ header a {
     left: 9px;
     top: 10px;
 }
+.nav-item .entry-description {
+    margin: 0;
+}
+.nav-item .entry-meta {
+    margin-top: 1.62em;
+}
 
 
 /* - Banner */
@@ -348,12 +357,11 @@ header a {
 .entry {
     margin-bottom: 4.2em;
 }
-.entry-header time {
-    display: inline-block;
-    margin: 0 0 0.62em;
-}
 .entry-title {
-    margin: 0 0 0.62em;
+    margin: 0.2em 0 0.62em;
+}
+.simple-list .entry-title {
+    margin-bottom: 0;
 }
 .entry-content {
     margin: 1.62em 0;
@@ -569,7 +577,6 @@ header a {
 
 /* - Footer */
 .page-footer {
-    font-size: 90%;
     text-align: center;
 }
 .page-footer p {
@@ -578,6 +585,7 @@ header a {
 
 
 /* - Clearfix */
+.header-menu:after, 
 .content-nav:after, 
 .content:after {
     content:'';

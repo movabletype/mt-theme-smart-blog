@@ -1,26 +1,16 @@
 <mt:Entries category="$entry_category" lastn="$entry_count">
     <mt:If name="__first__">
 <nav class="widget entry-listing">
+
     <h2 class="title widget-title list-divider">
         <mt:Var name="entry_category" default="<__trans phrase="Recent Entries">">
     </h2>
+
     <ul class="nav-list" data-role="listview">
     </mt:If>
-        <li class="nav-item">
-            <a href="<$mt:EntryPermalink$>">
-                <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>" class="ui-li-desc"><$mt:EntryDate format="%x %X"$></time>
-                <div class="ui-li-heading">
-    <mt:if tag="EntryTitle">
-        <$mt:EntryTitle$>
-    <mt:Else>
-        <__trans phrase="Untitled">
-    </mt:If>
-                </div>
-    <mt:if tag="EntryCommentCount">
-                <div class="comments count ui-li-count"><$mt:EntryCommentCount$></div>
-    </mt:if>
-            </a>
-        </li>
+
+    <mt:Include module="<__trans phrase="Entry Summary">">
+
     <mt:If name="__last__">
     </ul>
         <mt:EntryCategories>

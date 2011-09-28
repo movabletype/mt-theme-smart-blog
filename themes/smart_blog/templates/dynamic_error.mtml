@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
 <mt:IfUserAgent wants="SmartPhone">
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
 <mt:Else>
@@ -8,20 +9,45 @@
 </mt:IfUserAgent>
         <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Page Not Found"></title>
     </head>
-    <body>
+    <body class="system">
+
         <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content" data-theme="a">
-                <section>
-                    <h1 class="title page-title"><__trans phrase="Page Not Found"></h1>
-                    <pre><strong><$mt:ErrorMessage$></strong></pre>
-                </section>
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+                    <section>
+                        <h1 class="title page-title"><__trans phrase="Page Not Found"></h1>
+                        <pre><strong><$mt:ErrorMessage$></strong></pre>
+                    </section>
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer" data-theme="a">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+
+                </div>
             </footer>
+
         </div>
         <script>
         jQuery(function() {

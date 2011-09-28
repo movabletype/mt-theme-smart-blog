@@ -1,46 +1,24 @@
-<mt:Setvar name="advanced" value="0">
+<mt:Pages limit="$entries_per_page" search_results="1">
+    <mt:If name="__first__">
 <nav id="menu-pages" class="widget entry-listing">
     <h2 class="title widget-title"><__trans phrase="Pages"></h2>
     <ul class="nav-list" data-role="listview" data-inset="true">
-<mt:Pages limit="$entries_per_page" search_results="1">
-    <mt:if name="advanced">
-        <li class="nav-item has-thumb">
-            <a href="<$mt:PagePermalink$>">
-        <mt:PageAssets type="image" tag="@SITE_ENTRY_ICON" limit="1">
-                <img src="<mt:AssetThumbnailURL height="150" square="1">" class="thumb ui-li-thumb">
-        <mt:Else>
-            <mt:PageAssets type="image" limit="1">
-                <img src="<mt:AssetThumbnailURL height="150" square="1">" class="thumb ui-li-thumb">
-            <mt:Else>
-                <mt:Assets type="image" tag="@SITE_NO_IMAGE_ICON" limit="1">
-                <img src="<$mt:AssetThumbnailURL height="150" square="1">" alt="<__trans phrase="NO Image">" class="thumb ul-li-thumb">
-                <mt:Else>
-                <img src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/no-image.png" alt="<__trans phrase="No Image">" class="thumb ui-li-thumb">                
-                </mt:Assets>
-            </mt:PageAssets>
-        </mt:PageAssets>
-                <div class="ui-li-heading">
-        <mt:if tag="PageTitle">
-            <$mt:PageTitle$>
-        <mt:Else>
-                <__trans phrase="Untitled">
-        </mt:If>
-                </div>
-            </a>
-        </li>
-    <mt:Else>
+    </mt:If>
+
         <li class="nav-item">
             <a href="<$mt:PagePermalink$>">
                 <div class="ui-li-heading">
-        <mt:if tag="PageTitle">
-            <$mt:PageTitle$>
-        <mt:Else>
-            <__trans phrase="Untitled">
-        </mt:If>
+    <mt:if tag="PageTitle">
+        <$mt:PageTitle$>
+    <mt:Else>
+        <__trans phrase="Untitled">
+    </mt:If>
                 </div>
             </a>
         </li>
-    </mt:If>
-</mt:Pages>
+
+    <mt:If name="__last__">
     </ul>
 </nav>
+    </mt:If>
+</mt:Pages>

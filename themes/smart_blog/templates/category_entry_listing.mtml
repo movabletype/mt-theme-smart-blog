@@ -1,4 +1,5 @@
 <$mt:Var name="entries_per_page" value="10"$>
+
 <mt:SetVarBlock name="search_link">
     <$mt:CGIPath$><$mt:SearchScript$>?IncludeBlogs=<$mt:BlogID$>
     &template_id=<$mt:BuildTemplateID$>
@@ -7,51 +8,81 @@
     &category=<$mt:CategoryID$>
     &page=
 </mt:SetVarBlock>
+
 <$mt:Var name="search_link" strip="" trim="1" setvar="search_link"$>
+
 <!DOCTYPE html>
 <html>
     <head>
-<mt:If name="search_results">
-    <mt:IfUserAgent wants="SmartPhone">
-        <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
-    <mt:Else>
-        <$mt:Include module="<__trans phrase="HTML Head">"$>
-    </mt:Else>
-    </mt:IfUserAgent>
-<mt:Else>
+
+<mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
-        <mt:DynamicMTML>
-            <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
-        </mt:DynamicMTML>
+
+        <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+
     <mtml tag="mt:else">
+
+        <mt:Ignore><!-- for Other --></mt:Ignore>
         <$mt:Include module="<__trans phrase="HTML Head">"$>
+
     <mtml tag="/mt:IfUserAgent">
-</mt:If>
+</mt:BuildRecurs>
+
         <title><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
     </head>
-    <body class="archive entry-listing category">
-        <div class="container" data-role="page" data-theme="a">
-            <header class="page-header" data-role="header">
+    <body class="archive category">
+
+        <div class="container" data-role="page">
+
+            <header class="page-header">
+
+               <div class="header-inner inner" data-role="header" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Header">"$>
+
+               </div>
+
+               <div class="header-menu">
+                   <div class="header-menu-inner inner">
+
+<$mt:Include module="<__trans phrase="Header Menu">"$>
+
+                   </div>
+               </div>
+
             </header>
-            <div class="content" data-role="content" data-theme="a">
-                <section class="main-content">
-                    <h1 class="title content-title"><__trans phrase="Recently in [_1] Category" params="<$mt:ArchiveTitle$>"></h1>
+
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
+
+                    <div class="main-content">
+                        <h1 class="title content-title"><__trans phrase="Recently in &ldquo;[_1]&rdquo; Category" params="<$mt:ArchiveTitle$>"></h1>
               
+<mt:Ignore><!-- Main Content --></mt:Ignore>
 <$mt:Include module="<__trans phrase="Entry Listing">"$>
-                </section>
+
+                    </div>
+
 <mt:BuildRecurs>
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mtml tag="mt:else">
-                <div class="related-content">
+                   <div class="related-content">
+<mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
-                </div>
+                   </div>
     <mtml tag="/mt:IfUserAgent">
-</mt:BuildRecurs>
+</mt:BuildRecurs>    
+
+                </div>
             </div>
-            <footer class="page-footer" data-role="footer" data-theme="a">
+
+            <footer class="page-footer">
+                <div class="footer-inner inner" data-role="footer" data-theme="a">
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+                </div>
             </footer>
+
         </div>
         <script> 
         jQuery(function() {

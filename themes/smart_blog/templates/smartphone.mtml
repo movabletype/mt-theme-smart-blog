@@ -22,10 +22,17 @@ acronym:after {
 
 
 /* - Layout */
-.content {
+.inner {
     width: auto;
     max-width: 100%;
     margin: 0;
+}
+.content, 
+.page-header, 
+.page-footer {
+    padding: 0;
+}
+.content-inner {
     padding: 0 9px;
 }
 .main-content {
@@ -59,8 +66,8 @@ textarea {
 }
 
 /* - Header */
-.page-header, 
-.page-footer {
+.ui-header, 
+.ui-footer {
     padding: 1px 0;
     overflow: visible ! important;
 }
@@ -117,6 +124,13 @@ textarea {
     white-space: nowrap;
 }
 
+.header-menu {
+    margin: 0;
+}
+.header-menu #menu-search {
+    float: none;
+}
+
 
 /* - Banner */
 .banner {
@@ -148,16 +162,21 @@ textarea {
     min-height: 60px;
     padding-left: 100px;
 }
+.nav-item .entry-meta {
+    margin-top: 0;
+}
+.nav-item time {
+    font-size: 12px;
+}
 
 
 /* - Article */
 .entry-header {
     margin: 0.62em 0;
 }
-.entry-title {
-    font-size: 20px;
+.entry-header time {
+    font-size: 90%;
 }
-
 
 /* - Comments */
 #comments-open-footer .ui-btn {
