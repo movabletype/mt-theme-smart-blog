@@ -117,10 +117,10 @@ button:active,
 .menu .widget .nav-item a {
     background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
 }
-.nav-item > span {
+.widget .nav-item > span {
     color: #9ea1a3;
 }
-.nav-item a:hover {
+.widget .nav-item a:hover {
     background-color: #f3f3f3;
 }
 

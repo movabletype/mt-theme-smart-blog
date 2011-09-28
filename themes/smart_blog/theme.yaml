@@ -78,18 +78,22 @@ elements:
             label: Comment Form
           entry_listing:
             label: Entry Listing
+          entry_summary:
+            label: Entry Summary
           filtered_entry_listing:
             label: Filtered Entry Listing
+          header_menu:
+            label: Header Menu
           html_head:
             label: HTML Head          
           html_head_mobile:
             label: HTML Head Mobile
           page_listing:
             label: Page Listing
+          page_navigation:
+            label: Page Navigation
           pagination_content_navigation:
             label: Pagination Content Navigation
-          pagination_search_link:
-            label: Pagination Search Link
         system:
           comment_listing:
             description_label: Improved listing of comments.
@@ -123,7 +127,6 @@ elements:
             label: 'Related Content'
             order: 2000
             widgets:
-              - Search
               - Category Archives
               - Tag Cloud
               - Syndication

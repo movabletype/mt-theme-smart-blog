@@ -1,0 +1,13 @@
+<mt:Pages tag="@SITE_NAV_PAGE">
+<mt:If name="__first__">
+<nav class="page-listing">
+    <ul class="nav-list">
+</mt:If>
+        <li class="nav-item">
+            <a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a>
+        </li>
+<mt:If name="__last__">
+    </ul>
+</nav>
+</mt:If>
+</mt:Pages>
