@@ -87,7 +87,7 @@ button:active,
 
 
 /* - Menu, Widget */
-.menu .detail-link {
+.header-menu .detail-link {
     background: transparent url(../../images/icon-search-white.png) no-repeat center;
 }
 
@@ -95,11 +95,11 @@ button:active,
 .menu.active .tabs {
     background-color: rgba(0, 0, 0, 0.3);
 }
-.menu .tab {
+.header-menu .tab {
     color: #fff;
 }
 .tab.active, 
-.menu .widget {
+.header-menu.active .widget {
     background-color: #fff;
     color: #000;
 }
@@ -107,14 +107,10 @@ button:active,
 .widget .nav-item { 
     border-color: #bfc5c8;
 }
-.menu .widget > ul,
-.menu .widget .nav-item { 
-    border-color: #38a1db;
-}
 .widget .nav-item a {
     color: #2f3e46;
 }
-.menu .widget .nav-item a {
+.header-menu .widget .nav-item a {
     background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
 }
 .widget .nav-item > span {
@@ -186,7 +182,7 @@ a:hover {
 .ui-bar-a,
 .page-header, 
 .page-footer,
-.menu .detail {
+.header-menu .detail {
     border: 0;
     background: #007bbb;
     color: #fff;

@@ -89,25 +89,43 @@ textarea {
 }
 
 
-/* - Menu, Widget */
-.menu .detail-link {
+/* - Menu */
+.header-menu {
+    margin: 0;
+}
+.header-menu .detail-link {
     width: 36px;
     height: 100%;
     margin-top: -50%;
     text-align: center;
 }
-.menu .detail {
+.header-menu .detail {
     display: none;
     position: absolute;
     z-index: 100;
     width: 100%;
     -webkit-box-shadow: #000 0 6px 8px;
 }
-.menu-content > ul, 
-.menu-content > ul > .nav-item:first-child { 
+.header-menu .widget > ul, 
+.header-menu .widget > ul > .nav-item:first-child { 
     border: 0;
 }
 
+.header-menu .widget-title {
+    display: none;
+}
+
+.header-menu #menu-search {
+    float: none;
+    padding: 0.62em;
+}
+.header-menu #menu-search .search-submit, 
+.header-menu #menu-search .ui-btn  {
+    display: none;
+}
+
+
+/* - Widget */
 .widget {
     margin: 0;
 }
@@ -122,13 +140,6 @@ textarea {
     overflow: hidden;
     padding-right: 80px;
     white-space: nowrap;
-}
-
-.header-menu {
-    margin: 0;
-}
-.header-menu #menu-search {
-    float: none;
 }
 
 
