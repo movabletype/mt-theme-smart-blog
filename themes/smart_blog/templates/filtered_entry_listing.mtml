@@ -6,13 +6,14 @@
         <mt:Var name="entry_category" default="<__trans phrase="Recent Entries">">
     </h2>
 
-    <ul class="nav-list" data-role="listview">
+    <ul class="nav-list" data-role="listview" data-theme="a">
     </mt:If>
 
     <mt:Include module="<__trans phrase="Entry Summary">">
 
     <mt:If name="__last__">
     </ul>
+<mt:IfArchiveTypeEnabled archive_type="Category">
         <mt:EntryCategories>
             <mt:CategoryLabel setvar="category_name">
             <mt:If name="category_name" eq="$entry_category">
@@ -21,6 +22,7 @@
     </a>
             </mt:If>
         </mt:EntryCategories>
+</mt:IfArchiveTypeEnabled>
 </nav>
     </mt:If>
 </mt:Entries>
