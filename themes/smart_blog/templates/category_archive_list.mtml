@@ -1,26 +1,28 @@
-<mt:IfArchiveTypeEnabled archive_type="Category">
+<mt:If tag="BlogCategoryCount">
+    <mt:IfArchiveTypeEnabled archive_type="Category">
 <nav id="menu-cat" class="widget">
     <h2 class="title widget-title"><__trans phrase="Categories"></h2>
-    <mt:TopLevelCategories>
-        <mt:SubCatIsFirst>
+        <mt:TopLevelCategories>
+            <mt:SubCatIsFirst>
     <ul>
-        </mt:SubCatIsFirst>
-        <mt:If tag="CategoryCount">
+            </mt:SubCatIsFirst>
+            <mt:If tag="CategoryCount">
         <li class="nav-item">
             <a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>>
                 <__trans phrase="[_1] <span class="count">[_2]</span>" params="<$mt:CategoryLabel$>%%<$mt:CategoryCount$>">
             </a>
-        <mt:Else>
+            <mt:Else>
         <li class="nav-item">
             <span>
-            <$mt:CategoryLabel$>
+                <$mt:CategoryLabel$>
             </span>
-        </mt:If>
-        <$mt:SubCatsRecurse$>
+            </mt:If>
+            <$mt:SubCatsRecurse$>
         </li>
-        <mt:SubCatIsLast>
+            <mt:SubCatIsLast>
     </ul>
-        </mt:SubCatIsLast>
-    </mt:TopLevelCategories>
+            </mt:SubCatIsLast>
+        </mt:TopLevelCategories>
 </nav>
-</mt:IfArchiveTypeEnabled>
+    </mt:IfArchiveTypeEnabled>
+</mt:If>
