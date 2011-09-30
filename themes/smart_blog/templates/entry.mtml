@@ -58,15 +58,15 @@
                             <footer class="entry-footer">
                                 <ul class="entry-meta">
 <mt:If tag="EntryAuthorDisplayName">
-                                    <li class="author"><__trans phrase="Author:"> <address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></li>
+                                    <li class="author"><__trans phrase="Author">: <address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></li>
 </mt:If>
 <mt:IfArchiveTypeEnabled archive_type="Category">
     <mt:If tag="EntryCategories">
-                                    <li class="entry-categories"><__trans phrase="Category:"> <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></mt:EntryCategories></li>
+                                    <li class="entry-categories"><__trans phrase="Category">: <mt:EntryCategories glue=", "><a href="<$mt:CategoryArchiveLink$>" rel="tag"><$mt:CategoryLabel$></a></mt:EntryCategories></li>
     </mt:If>
 </mt:IfArchiveTypeEnabled>
 <mt:EntryIfTagged>
-                                    <li class="entry-tags"><__trans phrase="Tags:"> <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></mt:EntryTags></li>
+                                    <li class="entry-tags"><__trans phrase="Tags">: <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></mt:EntryTags></li>
 </mt:EntryIfTagged>
                                 </ul>
                             </footer>

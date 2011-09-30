@@ -36,8 +36,8 @@
 
             </header>
 
-            <div class="content" data-role="content" data-theme="a">
-                <div class="content-inner inner">
+            <div class="content">
+                <div class="content-inner inner" data-role="content" data-theme="a">
 
                     <div class="main-content">
                  
@@ -51,6 +51,12 @@
 <$mt:PageBody$>
 <$mt:PageMore$>
                             </div>
+
+                            <footer class="entry-footer">
+                                <ul class="entry-meta">
+                                    <li class="entry-date"><__trans phrase="Last Update">: <time datetime="<$mt:PageModifiedDate format_name="iso8601"$>"><$mt:PageModifiedDate format="%x %X"$></time></li>                                
+                                </ul>
+                            </footer>
 
 <mt:Include module="<__trans phrase="Comments">">
 
