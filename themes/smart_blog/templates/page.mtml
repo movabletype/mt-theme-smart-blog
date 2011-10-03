@@ -12,7 +12,7 @@
     <$mt:Include module="<__trans phrase="HTML Head">"$>
 <mtml tag="/mt:IfUserAgent">
 
-        <title><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+        <title><mt:if tag="PageTitle"><$mt:PageTitle encode_html="1"$><mt:Else><__trans phrase="Untitled"></mt:If> - <$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="individual webpage">
 
@@ -44,7 +44,13 @@
                         <article id="page-<$mt:PageID$>" class="page">
 
                             <header title="entry-title">
-                                <h1 class="title entry-title"><$mt:PageTitle$></h1>
+                                <h1 class="title entry-title">
+    <mt:if tag="PageTitle">
+        <$mt:PageTitle$>
+    <mt:Else>
+        <__trans phrase="Untitled">
+    </mt:If>
+                                </h1>
                             </header>
                         
                             <div class="entry-content">                        

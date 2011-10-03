@@ -13,7 +13,7 @@
 <mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
 <mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
 
-        <title><$mt:EntryTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+        <title><mt:if tag="EntryTitle"><$mt:EntryTitle encode_html="1"$><mt:Else><__trans phrase="Untitled"></mt:If> - <$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="individual">
 
@@ -47,7 +47,13 @@
 
                             <header class="entry-header">
                                 <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
-                                <h1 class="title entry-title"><$mt:EntryTitle$></h1>
+                                <h1 class="title entry-title">
+    <mt:if tag="EntryTitle">
+        <$mt:EntryTitle$>
+    <mt:Else>
+        <__trans phrase="Untitled">
+    </mt:If>
+                                </h1>
                             </header>
 
                             <div class="entry-content">                        
