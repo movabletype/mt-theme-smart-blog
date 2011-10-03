@@ -88,8 +88,6 @@ elements:
             label: HTML Head          
           html_head_mobile:
             label: HTML Head Mobile
-          page_listing:
-            label: Page Listing
           page_navigation:
             label: Page Navigation
           pagination_content_navigation:
@@ -120,6 +118,8 @@ elements:
             label: Search
           syndication:
             label: Syndication
+          page_listing:
+            label: Page Listing
           tag_cloud:
             label: Tag Cloud
         widgetset:

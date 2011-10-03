@@ -270,12 +270,15 @@ header a {
     margin-top: 0;
 }
 #menu-search {
-    margin: 0;
     padding: 0.62em;
 }
 .header-menu #menu-search {
     float: right;
+    margin: 0;
     padding: 0.31em 0;
+}
+.related-content #menu-search .text {
+    width: 80%;
 }
 #menu-search .ui-input-search {
     width: 100%;
