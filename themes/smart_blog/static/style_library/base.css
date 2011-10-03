@@ -382,6 +382,7 @@ header a {
     margin: 1.62em 0;
 }
 .entry-footer {
+    clear: both;
     margin-top: 2.62em;
     font-size: 90%;
 }
