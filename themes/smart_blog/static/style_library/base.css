@@ -303,7 +303,7 @@ header a {
 .widget .nav-item > span {
     position: relative;
     display: block;
-    padding: 10px 9px;
+    padding: 10px 35px 10px 9px;
     text-decoration: none;
 }
 
