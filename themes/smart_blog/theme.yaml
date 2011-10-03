@@ -4,7 +4,14 @@ version: (dev)
 author_link: http://www.sixapart.jp/
 author_name: 'Six Apart'
 class: blog
+required_components:
+  DynamicMTML: 1.5.5
 elements:
+  default_prefs:
+    component: core
+    importer: default_prefs
+    data:
+      dynamic_mtml: 1    
   template_set:
     component: core
     importer: template_set
