@@ -104,7 +104,8 @@ button:active,
     color: #000;
 }
 .widget > ul,
-.widget .nav-item { 
+.widget .nav-item, 
+.widget .nav-item.more-link { 
     border-color: #bfc5c8;
 }
 .widget .nav-item a {
@@ -116,7 +117,8 @@ button:active,
 .widget .nav-item > span {
     color: #9ea1a3;
 }
-.widget .nav-item a:hover {
+.widget .nav-item a:hover,
+.widget .more-link:hover {
     background-color: #f3f3f3;
 }
 
@@ -172,7 +174,7 @@ button,
 
 
 a, 
-.ui-link {
+.ui-body-a .ui-link {
     color: #274a78;
 }
 a:hover {

@@ -1,8 +1,7 @@
 <mt:Entries category="$entry_category" lastn="$entry_count">
     <mt:If name="__first__">
 <nav class="widget category-entry-listing">
-
-    <h2 class="title widget-title list-divider">
+    <h2 class="title widget-title">
         <mt:Var name="entry_category" default="<__trans phrase="Recent Entries">">
     </h2>
 
@@ -17,7 +16,7 @@
         <mt:EntryCategories>
             <mt:CategoryLabel setvar="category_name">
             <mt:If name="category_name" eq="$entry_category">
-    <a href="<$mt:CategoryArchiveLink$>" class="more-link">
+    <a href="<$mt:CategoryArchiveLink$>" class="nav-item more-link">
         <__trans phrase="Recently in &ldquo;[_1]&rdquo; Category" params="<mt:Var name="entry_category">">
     </a>
             </mt:If>

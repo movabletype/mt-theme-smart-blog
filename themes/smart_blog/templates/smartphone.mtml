@@ -94,6 +94,47 @@ textarea {
 }
 
 
+/* - Widget */
+.widget {
+    margin: 0;
+}
+
+.widget-title {
+    font-size: 100%;
+    margin: 0 -9px;
+    padding: 0.62em;
+    background: #adadad;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#adadad), to(#7b7c7d));
+    color: #fff;
+    text-shadow: 0 -1px 1px #383c3c;
+    font-size: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.widget .nav-item a, 
+.widget .nav-item > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.widget.has-count .nav-item a, 
+.widget.has-count .nav-item > span {
+    padding-right: 60px;
+}
+
+.widget .more-link {
+    margin: 0 -9px;
+    border-width: 0 0 1px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
 /* - Menu */
 .header-menu {
     margin: 0;
@@ -129,26 +170,6 @@ textarea {
     display: none;
 }
 
-
-/* - Widget */
-.widget {
-    margin: 0;
-}
-
-.widget-title {
-    font-size: 100%;
-}
-
-.widget .nav-item a, 
-.widget .nav-item > span {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.widget.has-count .nav-item a, 
-.widget.has-count .nav-item > span {
-    padding-right: 60px;
-}
 
 /* - Banner */
 .banner {

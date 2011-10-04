@@ -224,11 +224,6 @@ time {
     padding: 2px 0.62em;
     line-height: 1;
 }
-.widget .more-link {
-    display: block;
-    padding: 10px 9px;
-    margin: 0 -10px;
-}
 
 .page-listing .nav-list {
     margin: 0;
@@ -335,6 +330,14 @@ header a {
 .widget .nav-item li li li li li li > span {
     padding-left: 9em;
 }
+
+.widget .more-link {
+    display: block;
+    padding: 10px 9px;
+    border-width: 0;
+    text-align: right;
+}
+
 .nav-item .count {
     position: absolute;
     top: 50%;
