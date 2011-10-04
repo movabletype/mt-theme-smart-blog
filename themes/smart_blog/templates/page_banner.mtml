@@ -1,0 +1,15 @@
+<mt:Pages tag="$page_banner_tag" limit="1">
+    <mt:If name="__first__">
+<div class="banner page-banner">
+    </mt:If>
+    <a href="<$mt:PagePermalink$>">
+    <mt:Assets tag="$page_banner_tag" limit="1">
+        <img src="<$mt:AssetThumbnailURL width="640"$>">
+    <mt:Else>
+        <$mt:PageTitle$>
+    </mt:Assets>
+    </a>
+    <mt:If name="__last__">
+</div>
+    </mt:If>
+</mt:Pages>

@@ -99,6 +99,8 @@ elements:
             label: HTML Head          
           html_head_mobile:
             label: HTML Head Mobile
+          page_banner:
+            label: Page Banner Link
           page_navigation:
             label: Page Navigation
           pagination_content_navigation:
