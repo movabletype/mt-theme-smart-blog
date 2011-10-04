@@ -303,33 +303,37 @@ header a {
 .widget .nav-item > span {
     position: relative;
     display: block;
-    padding: 10px 35px 10px 9px;
+    padding: 10px 9px;
     text-decoration: none;
+}
+.widget.has-count .nav-item a, 
+.widget.has-count .nav-item > span {
+    padding-right: 38px;
 }
 
 .widget .nav-item li a, 
 .widget .nav-item li > span {
-    padding-left: 1em;
+    padding-left: 1.5em;
 }
 .widget .nav-item li li a, 
 .widget .nav-item li li > span {
-    padding-left: 2em;
+    padding-left: 3em;
 }
 .widget .nav-item li li li a, 
 .widget .nav-item li li li > span {
-    padding-left: 3em;
+    padding-left: 4.5em;
 }
 .widget .nav-item li li li li a, 
 .widget .nav-item li li li li > span {
-    padding-left: 4em;
+    padding-left: 6em;
 }
 .widget .nav-item li li li li li a, 
 .widget .nav-item li li li li li > span {
-    padding-left: 5em;
+    padding-left: 7.5em;
 }
 .widget .nav-item li li li li li li a, 
 .widget .nav-item li li li li li li > span {
-    padding-left: 6em;
+    padding-left: 9em;
 }
 .nav-item .count {
     position: absolute;
