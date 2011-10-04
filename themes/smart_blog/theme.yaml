@@ -91,6 +91,8 @@ elements:
             label: Entry Summary
           filtered_entry_listing:
             label: Filtered Entry Listing
+          footer_javascript:
+            label: Footer Javascript
           header_menu:
             label: Header Menu
           html_head:
