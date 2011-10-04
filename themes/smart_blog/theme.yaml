@@ -4,6 +4,8 @@ version: (dev)
 author_link: http://www.sixapart.jp/
 author_name: 'Six Apart'
 class: blog
+l10n_lexicon:
+  ja: l10n_ja.yaml
 required_components:
   DynamicMTML: 1.5.5
 elements:
