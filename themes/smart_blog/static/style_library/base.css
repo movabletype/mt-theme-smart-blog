@@ -122,6 +122,7 @@ button,
     outline: none;
     margin:0 0.62em 0 0;
     padding: 0.62em 1.62em;
+    line-height: 1;
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
     font-size: 100%;
     text-align: center;
