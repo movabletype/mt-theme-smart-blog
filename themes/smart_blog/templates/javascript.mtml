@@ -1193,14 +1193,14 @@ function mtShowGreeting() {
                     user_link = u.name;
             }
             // TBD: supplement phrase with userpic if one is available.
-            phrase = '<p class="logged-in signin-message"><__trans phrase="User: __NAME__ [_1][_2]" params="<a href="javascript:void(0)" class="signout-link" onclick="return mtSignOutOnClick();">%%</a>" escape="js"></p>';
+            phrase = '\<p class=\"logged-in signin-message\"\><__trans phrase="User">: \<a href=\"javas\cript:void(0)\" class=\"signout-link\" onclick=\"return mtSignOutOnClick();\"\>&nbsp;\<\/a\>__NAME__\</p>';
             phrase = phrase.replace(/__NAME__/, user_link);
         }
     } else {
         if (reg_reqd) {
-            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link signin-message" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
+            phrase = '\<a href=\"javas\cript:void(0)\" class=\"signin-link signin-message\" onclick=\"return mtSignInOnClick(\'comment-greeting\')\"\><__trans phrase="Sign in to comment">\<\/a\>';
         } else {
-            phrase = '<__trans phrase="[_1]Sign in to comment[_2]" params="<a href="javascript:void(0)" class="signin-link signin-message" onclick="return mtSignInOnClick('comment-greeting')">%%</a>" escape="js">';
+            phrase = '\<a href=\"javas\cript:void(0)\" class=\"signin-link signin-message\" onclick=\"return mtSignInOnClick(\'comment-greeting\')\"\><__trans phrase="Sign in to comment">\<\/a\>';
         }
     }
     el.innerHTML = phrase;
