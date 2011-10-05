@@ -29,7 +29,7 @@
     <mtml tag="/mt:IfUserAgent">
 </mt:BuildRecurs>
 
-        <title><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
+        <title><__trans phrase="[_1]" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
     </head>
     <body class="archive category">
 
@@ -57,7 +57,7 @@
                 <div class="content-inner inner" data-role="content" data-theme="a">
 
                     <div class="main-content">
-                        <h1 class="title content-title"><__trans phrase="Recently in &ldquo;[_1]&rdquo; Category" params="<$mt:ArchiveTitle$>"></h1>
+                        <h1 class="title content-title"><$mt:ArchiveTitle$></h1>
               
 <mt:Ignore><!-- Main Content --></mt:Ignore>
 <$mt:Include module="<__trans phrase="Entry Listing">"$>

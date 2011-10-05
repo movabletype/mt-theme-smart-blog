@@ -1193,7 +1193,7 @@ function mtShowGreeting() {
                     user_link = u.name;
             }
             // TBD: supplement phrase with userpic if one is available.
-            phrase = '<p class="logged-in signin-message"><__trans phrase=" __NAME__ [_1][_2]" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();" class="signout-link">%%</a>" escape="js"></p>';
+            phrase = '<p class="logged-in signin-message"><__trans phrase="User: __NAME__ [_1][_2]" params="<a href="javascript:void(0)" class="signout-link" onclick="return mtSignOutOnClick();">%%</a>" escape="js"></p>';
             phrase = phrase.replace(/__NAME__/, user_link);
         }
     } else {

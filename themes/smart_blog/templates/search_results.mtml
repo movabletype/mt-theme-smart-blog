@@ -16,7 +16,15 @@
             var user = <$mt:UserSessionState$>;
         /* ]]> */
         </script>
-        <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Search Results"></title>
+
+<mt:IfStraightSearch>
+        <title><__trans phrase="Search Results"> <$mt:SearchString$> - <$mt:BlogName encode_html="1"$></title>
+</mt:IfStraightSearch>
+<mt:IfTagSearch>
+        <title><__trans phrase="Tagged"> <$mt:SearchString$> - <$mt:BlogName encode_html="1"$></title>
+</mt:IfTagSearch>
+
+        <title> - <__trans phrase="Search Results"></title>
 <mt:Ignore>Below Javascript adds ajax search capability</mt:Ignore>
         <script type="text/javascript">
         /* <![CDATA[ */
@@ -106,10 +114,10 @@
                     <section class="main-content">
                         <h1 class="title content-title">
             <mt:IfStraightSearch>
-                            <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                            <__trans phrase="Search Results"> &ldquo;<$mt:SearchString$>&rdquo;
             </mt:IfStraightSearch>
             <mt:IfTagSearch>
-                             <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
+                            <__trans phrase="Tagged"> &ldquo;<$mt:SearchString$>&rdquo;
             </mt:IfTagSearch>
                         </h1>
                         <nav class="widget index entry-listing">

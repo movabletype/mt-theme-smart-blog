@@ -92,7 +92,7 @@ elements:
           filtered_entry_listing:
             label: Filtered Entry Listing
           footer_javascript:
-            label: Footer Javascript
+            label: Footer JavaScript
           header_menu:
             label: Header Menu
           html_head:
