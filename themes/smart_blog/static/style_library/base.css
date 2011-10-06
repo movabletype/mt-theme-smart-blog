@@ -302,8 +302,7 @@ header a {
     padding: 10px 9px;
     text-decoration: none;
 }
-.widget.has-count .nav-item a, 
-.widget.has-count .nav-item > span {
+.widget.has-count .nav-item a {
     padding-right: 38px;
 }
 
