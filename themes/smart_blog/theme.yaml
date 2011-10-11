@@ -138,8 +138,8 @@ elements:
             label: Syndication
           page_listing:
             label: Page Listing
-          tag_cloud:
-            label: Tag Cloud
+          tags:
+            label: Tags
         widgetset:
           related_content:
             label: 'Related Content'
