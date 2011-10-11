@@ -143,8 +143,8 @@ elements:
         widgetset:
           related_content:
             label: 'Related Content'
-            order: 2000
+            order: 1000
             widgets:
               - Category Archives
-              - Tag Cloud
+              - Tags
               - Syndication
