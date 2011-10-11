@@ -2,7 +2,7 @@ label: Smart Blog
 id: smart_blog
 version: (dev)
 author_link: http://www.sixapart.jp/
-author_name: 'Six Apart'
+author_name: Six Apart
 class: blog
 l10n_lexicon:
   en: l10n_en.yaml
@@ -49,10 +49,6 @@ elements:
           styles:
             label: Stylesheet
             outfile: styles.css
-            rebuild_me: 1
-          smartphone:
-            label: Style for Smartphone
-            outfile: smartphone.css
             rebuild_me: 1
         individual:
           entry:
