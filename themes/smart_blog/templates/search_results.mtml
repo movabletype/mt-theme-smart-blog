@@ -6,9 +6,15 @@
     <head>
 
 <mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+
 <mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
+
 </mt:IfUserAgent>
 
         <script type="text/javascript">
@@ -97,7 +103,17 @@
                <div class="header-menu menu">
                    <div class="header-menu-inner inner">
 
-<$mt:Include module="<__trans phrase="Header Menu">"$>
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu Mobile">"$>
+
+<mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu">"$>
+
+</mt:IfUserAgent>
 
                    </div>
                </div>
@@ -172,28 +188,38 @@
                     </div>
 </mt:NoSearch>
 
-<mt:BuildRecurs>
-    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
-    <mtml tag="mt:else">
+
+<mt:IfUserAgent wants="SmartPhone">
+<mt:Else>
                     <div class="related-content">
-<mt:Ignore><!-- Related Content --></mt:Ignore>
+
+        <mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
+
                     </div>
-    <mtml tag="/mt:IfUserAgent">
-</mt:BuildRecurs>
+</mt:IfUserAgent>
 
                 </div>
             </div>
 
             <footer class="page-footer">
                 <div class="footer-inner inner" data-role="footer" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+
                 </div>
             </footer>
 
         </div>
         <script>
-<$mt:Include module="<__trans phrase="Footer JavaScript">"$>
+
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Footer JavaScript Mobile">"$>
+
+</mt:IfUserAgent>
+
 <mt:IfMoreResults>
         var div = document.getElementById('search-results');
         var results = {

@@ -3,10 +3,17 @@
     <head>
 
 <mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+
 <mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
+
 </mt:IfUserAgent>
+
         <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Page Not Found"></title>
     </head>
     <body class="system">
@@ -22,9 +29,19 @@
                </div>
 
                <div class="header-menu menu">
-                   <div class="header-menu-inner">
+                   <div class="header-menu-inner inner">
 
-<$mt:Include module="<__trans phrase="Header Menu">"$>
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu Mobile">"$>
+
+<mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu">"$>
+
+</mt:IfUserAgent>
 
                    </div>
                </div>
@@ -50,7 +67,14 @@
 
         </div>
         <script>
-<$mt:Include module="<__trans phrase="Footer JavaScript">"$>
+
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Footer JavaScript Mobile">"$>
+
+</mt:IfUserAgent>
+
         </script>
     </body>
 </html>

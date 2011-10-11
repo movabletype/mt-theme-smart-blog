@@ -1,0 +1,19 @@
+<span class="toggle-button detail-link toggle-trigger"></span>
+
+<div id="menu-tabs" class="detail">
+
+    <ul class="tabs">
+        <li data-tab="menu-search" class="tab"><__trans phrase="Search"></li>
+    <mt:If tag="BlogCategoryCount">
+        <li data-tab="menu-cat" class="tab"><__trans phrase="Categories"></li>
+    </mt:If>
+        <li data-tab="menu-tags" class="tab"><__trans phrase="Tags"></li>
+    </ul>
+
+    <mt:Include widget="<__trans phrase="Search">">
+
+    <mt:Include widget="<__trans phrase="Category Archives">">
+
+    <mt:Include widget="<__trans phrase="Tag Cloud">">
+
+</div>

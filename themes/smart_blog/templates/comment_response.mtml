@@ -14,9 +14,15 @@
     <head>
 
 <mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head Mobile">"$>
+
 <mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
     <$mt:Include module="<__trans phrase="HTML Head">"$>
+
 </mt:IfUserAgent>
 
         <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Previewing your Comment"></title>
@@ -40,7 +46,17 @@
                <div class="header-menu menu">
                    <div class="header-menu-inner inner">
 
-<$mt:Include module="<__trans phrase="Header Menu">"$>
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu Mobile">"$>
+
+<mt:Else>
+
+    <mt:Ignore><!-- for Other --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Header Menu">"$>
+
+</mt:IfUserAgent>
 
                    </div>
                </div>
@@ -51,7 +67,9 @@
                 <div class="content-inner inner" data-role="content" data-theme="a">
                     <section id="comment-response" class="comments feedback">
                         <h1 class="title content-title"><$mt:Var name="page_title"$></h1>
+
 <$mt:Var name="message"$>
+
                         <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
                     </section>
                 </div>
@@ -67,7 +85,14 @@
 
         </div>
         <script>
-<$mt:Include module="<__trans phrase="Footer JavaScript">"$>
+
+<mt:IfUserAgent wants="SmartPhone">
+
+    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+    <$mt:Include module="<__trans phrase="Footer JavaScript Mobile">"$>
+
+</mt:IfUserAgent>
+
         </script>
     </body>
 </html>

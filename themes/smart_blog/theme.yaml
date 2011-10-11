@@ -94,8 +94,12 @@ elements:
             label: Filtered Entry Listing
           footer_javascript:
             label: Footer JavaScript
+          footer_javascript_mobile:
+            label: Footer JavaScript Mobile
           header_menu:
             label: Header Menu
+          header_menu_mobile:
+            label: Header Menu Mobile
           html_head:
             label: HTML Head          
           html_head_mobile:

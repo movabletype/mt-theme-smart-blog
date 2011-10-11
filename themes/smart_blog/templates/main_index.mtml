@@ -45,7 +45,19 @@
                <div class="header-menu menu">
                    <div class="header-menu-inner inner">
 
-<$mt:Include module="<__trans phrase="Header Menu">"$>
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+
+        <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="Header Menu Mobile">"$>
+
+    <mtml tag="mt:else">
+
+        <mt:Ignore><!-- for Other --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="Header Menu">"$>
+
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>
 
                    </div>
                </div>
@@ -74,8 +86,10 @@
     <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
     <mtml tag="mt:else">
                    <div class="related-content">
-<mt:Ignore><!-- Related Content --></mt:Ignore>
+
+        <mt:Ignore><!-- Related Content --></mt:Ignore>
         <$mt:WidgetSet name="<__trans phrase="Related Content">"$>
+
                    </div>
     <mtml tag="/mt:IfUserAgent">
 </mt:BuildRecurs>    
@@ -85,13 +99,24 @@
 
             <footer class="page-footer">
                 <div class="footer-inner inner" data-role="footer" data-theme="a">
+
 <$mt:Include module="<__trans phrase="Banner Footer">"$>
+
                 </div>
             </footer>
 
         </div>
         <script>
-<$mt:Include module="<__trans phrase="Footer JavaScript">"$>
+
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
+
+        <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="Footer JavaScript Mobile">"$>
+
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>
+
         </script>
     </body>
 </html>
