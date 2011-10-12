@@ -158,6 +158,13 @@ button:active,
     border-radius: 0 0 0.62em 0.62em;
     -moz-border-radius: 0 0 0.62em 0.62em;
 }
+#comment-greeting .signin-link {
+    border-radius: 0.62em;
+    -moz-border-radius: 0.62em;
+}
+#comment-greeting .signin-link:hover {
+    background-color: #f3f3f3;
+}
 #comment-greeting .signout-link {
     background: #939393 url(../../images/icon-close-white.png) no-repeat center;
     border-radius: 0 0.62em 0.62em 0;

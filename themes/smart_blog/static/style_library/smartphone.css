@@ -70,6 +70,15 @@ textarea {
     padding: 0;
 }
 
+.ui-link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}
+
+#comment-greeting .signin-link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
 /* - Header */
 .ui-header, 
 .ui-footer {
@@ -209,6 +218,10 @@ textarea {
 }
 .nav-item time {
     font-size: 12px;
+}
+.widget .nav-item a:hover,
+.widget .more-link:hover {
+    background-color: transparent;
 }
 
 
