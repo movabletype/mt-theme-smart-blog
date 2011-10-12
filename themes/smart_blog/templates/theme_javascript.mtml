@@ -1,7 +1,7 @@
 /* for jQuery Mobile */
 $(document).bind("mobileinit", function(){
-    if ( window.location.hash.match( /^#+_/ ) ) window.location.hash = '';
     $.mobile.ajaxEnabled = false;
+    $.mobile.hashListeningEnabled = false;
 });
 
 
