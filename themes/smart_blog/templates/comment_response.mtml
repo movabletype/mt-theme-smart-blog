@@ -70,7 +70,11 @@
 
 <$mt:Var name="message"$>
 
-                        <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
+<mt:If name="comment_error">
+                        <p><a href="javascript:history.back()"><__trans phrase="Back"></a></p>
+<mt:Else>
+                        <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<$mt:EntryLink$>"></p>
+</mt:If>
                     </section>
                 </div>
             </div>
