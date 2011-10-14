@@ -103,19 +103,19 @@ button:active,
     background-color: #fff;
     color: #000;
 }
-.widget > ul,
+.widget .nav-list,
 .widget .nav-item, 
 .widget .nav-item.more-link { 
     border-color: #bfc5c8;
+}
+.widget .nav-item {
+    color: #9ea1a3;
 }
 .widget .nav-item a {
     color: #2f3e46;
 }
 .header-menu .widget .nav-item a {
     background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
-}
-.widget .nav-item > span {
-    color: #9ea1a3;
 }
 .widget .nav-item a:hover,
 .widget .more-link:hover {

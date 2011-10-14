@@ -1,0 +1,35 @@
+.nav-item .count, 
+#comment-greeting .indicator, 
+#commenter-info li .required-icon {
+    top: 10px;
+    margin: 0;
+}
+#comment-greeting .signout-link {
+    height: 36px;
+}
+#commenter-info li input,
+#comments-open-text textarea {
+    padding: 0;
+    margin: 10px;
+    width: 618px;
+}
+.comment-preview #comments-open-text textarea {
+    width: 98%;
+}
+#commenter-info li input {
+    margin-left: 60px;
+    width: 558px;
+}
+.comment-preview #commenter-info li input {
+    width: 90%;
+}
+
+.header-menu {
+    height: 35px;
+}
+
+.header-menu, 
+.content-nav, 
+.content {
+    zoom: 1;
+}

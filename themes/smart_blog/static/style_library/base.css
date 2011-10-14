@@ -284,9 +284,12 @@ header a {
     margin: 0;
     padding: 0;
 }
-.widget > ul {
+.widget .nav-list {
     border-width: 0 0 1px;
     border-style: solid;
+}
+.widget .nav-list ul {
+    border: 0;
 }
 .widget .nav-item { 
     position: relative;
@@ -296,9 +299,9 @@ header a {
     border-style: solid;
 }
 .widget .nav-item a, 
-.widget .nav-item > span {
-    position: relative;
+.widget .nav-item .label {
     display: block;
+    position: relative;
     padding: 10px 9px;
     text-decoration: none;
 }
@@ -306,28 +309,22 @@ header a {
     padding-right: 38px;
 }
 
-.widget .nav-item li a, 
-.widget .nav-item li > span {
+.widget .nav-item li .label {
     padding-left: 1.5em;
 }
-.widget .nav-item li li a, 
-.widget .nav-item li li > span {
+.widget .nav-item li li .label {
     padding-left: 3em;
 }
-.widget .nav-item li li li a, 
-.widget .nav-item li li li > span {
+.widget .nav-item li li li .label {
     padding-left: 4.5em;
 }
-.widget .nav-item li li li li a, 
-.widget .nav-item li li li li > span {
+.widget .nav-item li li li li .label {
     padding-left: 6em;
 }
-.widget .nav-item li li li li li a, 
-.widget .nav-item li li li li li > span {
+.widget .nav-item li li li li li .label {
     padding-left: 7.5em;
 }
-.widget .nav-item li li li li li li a, 
-.widget .nav-item li li li li li li > span {
+.widget .nav-item li li li li li li .label {
     padding-left: 9em;
 }
 
@@ -348,7 +345,10 @@ header a {
     right: 25px;
 }
 .widget .has-thumb a {
+    display: block;
     min-height: 100px;
+    height: auto !important;
+    height: 100px;
     padding-left: 130px;
 }
 .nav-item .thumb {
@@ -537,7 +537,7 @@ header a {
 }
 #comments-open-text textarea {
     width: 100%;
-    min-height: 8em;
+    height: 8em;
     padding: 0.62em 9px;
     border: 0;
     background-color: transparent;
@@ -598,6 +598,9 @@ header a {
 /* - Content Navigation */
 .content-nav {
     margin: 1.62em 0;
+}
+.prev-link {
+    float: left;
 }
 .next-link {
     float: right;
