@@ -278,7 +278,9 @@ header a {
 }
 #menu-search .ui-input-search {
     width: 100%;
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 .widget ul {
     margin: 0;
@@ -430,6 +432,7 @@ header a {
 }
 
 /* -- Comments */
+
 #comments h1 {
     margin: 0;
     padding: 0.62em 9px;
@@ -527,9 +530,6 @@ header a {
     padding: 0;
     border: 1px solid #000;
 }
-.comments legend {
-    display: none;
-}
 #comments-open-text label {
     display: block;
     padding: 0.62em 9px 0;
@@ -542,11 +542,13 @@ header a {
     border: 0;
     background-color: transparent;
     -webkit-appearance: none;
-    -webkit-box-sizing: border-box;
     font-size: 16px;
     border-radius: 0;
     box-shadow: none;
     -webkit-box-shadow: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     resize: vertical;
 }
 #comments-open-text .message {
@@ -590,6 +592,7 @@ header a {
     -webkit-box-shadow: none;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 #commenter-info li input[required] {
     padding-right: 2em;

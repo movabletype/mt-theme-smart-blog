@@ -1,13 +1,12 @@
 <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
     <fieldset>
-        <legend><__trans phrase="Post a Comment"></legend>
-        <input type="hidden" name="static" value="1" />
-        <input type="hidden" name="armor" value="1" />
-        <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
-        <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
-        <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
-        <input type="hidden" name="preview" value="<mt:if name="comment_preview">1</mt:if>" />
-        <input type="hidden" name="sid" value="" />
+        <input type="hidden" name="static" value="1">
+        <input type="hidden" name="armor" value="1">
+        <input type="hidden" name="entry_id" value="<$mt:EntryID$>">
+        <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>">
+        <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id">
+        <input type="hidden" name="preview" value="<mt:if name="comment_preview">1</mt:if>">
+        <input type="hidden" name="sid" value="">
 
         <div id="comment-form-reply" style="display:none">
             <input type="checkbox" id="comment-reply" name="comment-reply" value="" onclick="mtSetCommentParentID()" data-role="none">
