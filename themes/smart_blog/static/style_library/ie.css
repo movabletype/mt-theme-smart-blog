@@ -4,6 +4,10 @@
     top: 10px;
     margin: 0;
 }
+#comment-form-reply input {
+    top: 7px;
+    margin: 0;
+}
 #comment-greeting .signout-link {
     height: 36px;
 }
@@ -30,6 +34,7 @@
 
 .header-menu, 
 .content-nav, 
-.content {
+.content, 
+#comment-form-reply {
     zoom: 1;
 }

@@ -468,16 +468,15 @@ header a {
 #comment-greeting {
     position: relative;
     margin: 1.62em 0 0.62em;
-    border: 1px solid;
+    border-width: 1px;
+    border-style: solid;
 }
 #comment-form-reply {
     position: relative;
-    margin-bottom: 0;
-    border: solid;
-    border-width: 0 0 1px;
-}
-#comment-form-reply {
     margin-top: 0;
+    margin-bottom: 0;
+    border-width: 0 0 1px;
+    border-style: solid;
 }
 #comment-greeting .indicator {
     position: absolute;
