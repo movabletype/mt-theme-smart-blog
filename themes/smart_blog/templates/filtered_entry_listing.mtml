@@ -1,27 +1,28 @@
 <mt:Entries category="$entry_category" lastn="$entry_count">
     <mt:If name="__first__">
-<nav class="widget category-entry-listing">
+<section class="widget category-entry-listing">
     <h2 class="title widget-title">
         <mt:Var name="entry_category" default="<__trans phrase="Recent Entries">">
     </h2>
-
-    <ul class="nav-list" data-role="listview" data-theme="a">
+    <nav>
+        <ul class="nav-list" data-role="listview" data-theme="a">
     </mt:If>
 
     <mt:Include module="<__trans phrase="Entry Summary">">
 
     <mt:If name="__last__">
-    </ul>
+        </ul>
 <mt:IfArchiveTypeEnabled archive_type="Category">
-        <mt:EntryCategories>
-            <mt:CategoryLabel setvar="category_name">
-            <mt:If name="category_name" eq="$entry_category">
-    <a href="<$mt:CategoryArchiveLink$>" class="nav-item more-link">
-        <__trans phrase="Recently in &ldquo;[_1]&rdquo; Category" params="<mt:Var name="entry_category">">
-    </a>
-            </mt:If>
-        </mt:EntryCategories>
+    <mt:EntryCategories>
+        <mt:CategoryLabel setvar="category_name">
+        <mt:If name="category_name" eq="$entry_category">
+        <a href="<$mt:CategoryArchiveLink$>" class="nav-item more-link">
+            <__trans phrase="Recently in &ldquo;[_1]&rdquo; Category" params="<mt:Var name="entry_category">">
+        </a>
+        </mt:If>
+    </mt:EntryCategories>
 </mt:IfArchiveTypeEnabled>
-</nav>
+    </nav>
+</section>
     </mt:If>
 </mt:Entries>

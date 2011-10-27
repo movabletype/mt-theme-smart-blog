@@ -1,13 +1,15 @@
 <mt:If tag="BlogEntryCount">
-<nav class="widget widget-entries">
+<section class="widget widget-entries">
     <h2 class="widget-title"><__trans phrase="Entries"></h2>
-    <ul class="nav-list" data-role="listview" data-theme="a">
+    <nav>
+        <ul class="nav-list" data-role="listview" data-theme="a">
 <mt:Entries limit="$entries_per_page" search_results="1">
 
     <mt:Include module="<__trans phrase="Entry Summary">">
 
 </mt:Entries>
-    </ul>
-</nav>
+        </ul>
+    </nav>
 <$mt:Include module="<__trans phrase="Pagination Content Navigation">"$>
+</section>
 </mt:If>

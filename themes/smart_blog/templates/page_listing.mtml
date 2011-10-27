@@ -1,24 +1,26 @@
 <mt:Pages>
     <mt:If name="__first__">
-<nav class="widget widget-pages">
+<section class="widget widget-pages">
     <h2 class="title widget-title"><__trans phrase="Pages"></h2>
-    <ul class="nav-list" data-role="listview" data-inset="true" data-theme="a">
+    <nav>
+        <ul class="nav-list" data-role="listview" data-inset="true" data-theme="a">
     </mt:If>
 
-        <li class="nav-item">
-            <a href="<$mt:PagePermalink$>">
-                <div class="ui-li-heading">
+            <li class="nav-item">
+                <a href="<$mt:PagePermalink$>">
+                    <div class="ui-li-heading">
     <mt:if tag="PageTitle">
         <$mt:PageTitle$>
     <mt:Else>
-        <__trans phrase="Untitled">
+            <__trans phrase="Untitled">
     </mt:If>
-                </div>
-            </a>
-        </li>
+                    </div>
+                </a>
+            </li>
 
     <mt:If name="__last__">
-    </ul>
-</nav>
+        </ul>
+    </nav>
+</section>
     </mt:If>
 </mt:Pages>
