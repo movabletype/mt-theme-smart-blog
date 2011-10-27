@@ -1,18 +1,18 @@
-Theme JavaScript: テーマ JavaScript
-Filtered Entry Listing: カテゴリ別ブログ記事
-Footer JavaScript: フッター JavaScript
-Footer JavaScript Mobile: フッター JavaScript スマートフォン
-HTML Head: HTML head 要素内コンテンツ
-HTML Head Mobile: HTML head 要素内コンテンツ スマートフォン
-Header Menu: ヘッダーメニュー
-Header Menu Mobile: ヘッダーメニュー スマートフォン
-Page Banner Link: ページバナー
-Page Navigation: ページナビゲーション
-Pagination Content Navigation: インデックスページナビゲーション
+Entry Listing - Category: ブログ記事リストカテゴリ指定
+JavaScript - Theme: JavaScriptテーマ用
+JavaScript Footer: JavaScriptフッター
+JavaScript Footer - Mobile: JavaScriptフッターモバイル用
+HTML Head: HTMLヘッダー
+HTML Head - Mobile: HTMLヘッダーモバイル用
+Menu: メニュー
+Menu - Mobile: メニューモバイル用
+Menu - Pages: メニュー内ページリスト
+Page Banner: ページバナー
+Pagination: ページネーション
 Keyword: キーワード
 Tagged: タグ
-Last Update: 最終更新日
-Sign in to comment: サインインしてコメントする
+Last update: 最終更新日
+Sign in to comment: サインインしてコメント
 __COMMENT_TITLE_PARENT__: "[_1] から [_2] への返信"
 You may use HTML tags for style.: スタイル用の HTML タグを使えます
 Previous: 前へ

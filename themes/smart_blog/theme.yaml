@@ -38,7 +38,7 @@ elements:
             label: JavaScript
             outfile: mt.js
             rebuild_me: 1
-          theme_javascript:
+          javascript_theme:
             label: Theme JavaScript
             outfile: mt-theme-smart-blog.js
             rebuild_me: 1
@@ -86,26 +86,26 @@ elements:
             label: Entry Listing
           entry_summary:
             label: Entry Summary
-          filtered_entry_listing:
-            label: Filtered Entry Listing
-          footer_javascript:
-            label: Footer JavaScript
-          footer_javascript_mobile:
-            label: Footer JavaScript Mobile
-          header_menu:
-            label: Header Menu
-          header_menu_mobile:
-            label: Header Menu Mobile
+          entry_listing_category:
+            label: Entry Listing - Category
+          javascript_footer:
+            label: JavaScript Footer
+          javascript_mobile_footer_mobile:
+            label: JavaScript Footer - Mobile
+          menu:
+            label: Menu
+          menu_mobile:
+            label: Menu - Mobile
+          menu_pages:
+            label: Menu - Pages
           html_head:
             label: HTML Head          
           html_head_mobile:
-            label: HTML Head Mobile
+            label: HTML Head - Mobile
           page_banner:
-            label: Page Banner Link
-          page_navigation:
-            label: Page Navigation
-          pagination_content_navigation:
-            label: Pagination Content Navigation
+            label: Page Banner
+          pagination:
+            label: Pagination
         system:
           comment_listing:
             description_label: Improved listing of comments.
