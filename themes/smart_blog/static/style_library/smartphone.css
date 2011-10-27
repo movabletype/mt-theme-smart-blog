@@ -160,11 +160,11 @@ textarea {
     position: absolute;
     z-index: 100;
     width: 100%;
-    box-shadow: #000 0 6px 8px;
-    -webkit-box-shadow: #000 0 6px 8px;
+    box-shadow: #666 0 3px 6px;
+    -webkit-box-shadow: #666 0 3px 6px;
 }
-.header-menu .widget > ul, 
-.header-menu .widget > ul > .nav-item:first-child { 
+.header-menu mav > ul, 
+.header-menu nav > ul > .nav-item:first-child { 
     border: 0;
 }
 
