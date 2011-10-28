@@ -90,7 +90,7 @@ elements:
             label: Entry Listing - Category
           javascript_footer:
             label: JavaScript Footer
-          javascript_mobile_footer_mobile:
+          javascript_footer_mobile:
             label: JavaScript Footer - Mobile
           menu:
             label: Menu
