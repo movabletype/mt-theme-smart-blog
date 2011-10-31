@@ -14,11 +14,6 @@ acronym {
     cursor: normal;
     border: 0;
 }
-abbr:after, 
-acronym:after { 
-    content: '(' attr(title) ')';
-    font-size: 90%;
-}
 
 
 /* - Layout */
@@ -123,15 +118,16 @@ textarea {
     white-space: nowrap;
 }
 
-.widget .nav-item a, 
-.widget .nav-item > span {
+.widget .nav-item .label {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-.widget.has-count .nav-item a, 
-.widget.has-count .nav-item > span {
+.widget.has-count .nav-item .label {
     padding-right: 60px;
+}
+.widget.has-count .nav-item span.label {
+    padding-right: 0.62em;
 }
 
 .widget .more-link {

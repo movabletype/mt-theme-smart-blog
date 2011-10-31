@@ -307,6 +307,7 @@ header a {
     position: relative;
     padding: 10px 9px;
     text-decoration: none;
+    word-break: break-all;
 }
 .widget.has-count .nav-item a {
     padding-right: 38px;
