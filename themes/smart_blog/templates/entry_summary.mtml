@@ -2,7 +2,7 @@
     <mt:Ignore><!-- Entry List --></mt:Ignore>
 <li class="nav-item simple-list">
     <a href="<$mt:EntryPermalink$>">
-        <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
+        <abbr class="data datetime pubdate" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></abbr>
         <div class="ui-li-heading entry-title">
     <mt:if tag="EntryTitle">
         <$mt:EntryTitle$>
@@ -16,7 +16,7 @@
     <mt:Ignore><!-- Advanced Entry List --></mt:Ignore>
 <li class="nav-item has-thumb">
     <a href="<$mt:EntryPermalink$>">
-        <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
+        <abbr class="data datetime pubdate" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></abbr>
         <div class="ui-li-heading entry-title">
     <mt:if tag="EntryTitle">
         <$mt:EntryTitle$>

@@ -151,7 +151,7 @@ article {
     margin-bottom: 2.62em;
 }
 
-.section {
+section {
     margin: 1.62em 0;
 }
 
@@ -159,8 +159,9 @@ figure {
     margin: 1.62em 0;
 }
 
-time {
+.datetime {
     font-weight: normal;
+    border: 0;
 }
 
 
