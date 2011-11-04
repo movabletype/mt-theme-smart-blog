@@ -5,8 +5,12 @@ author_link: http://www.sixapart.com/
 author_name: Six Apart, Ltd
 class: blog
 l10n_lexicon:
+  de: l10n_de.yaml
   en_us: l10n_en_us.yaml
+  es: l10n_es.yaml
+  fr: l10n_fr.yaml
   ja: l10n_ja.yaml
+  nl: l10n_nl.yaml
 required_components:
   DynamicMTML: 1.5.5
 elements:
