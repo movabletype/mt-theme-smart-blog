@@ -30,6 +30,14 @@ elements:
           order: 1
       templates:
         index:
+          dynamicmtml_bootstrapper:
+            label: DynamicMTML Bootstrapper
+            outfile: .mtview.php
+            rebuild_me: 1
+          dynamicmtml_htaccess:
+            label: DynamicMTML .htaccess
+            outfile: .htaccess
+            rebuild_me: 1
           feed_recent:
             label: 'Feed - Recent Entries'
             outfile: atom.xml
