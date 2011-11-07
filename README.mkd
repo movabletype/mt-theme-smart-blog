@@ -1,7 +1,163 @@
 # Smart Blog Theme for Movable Type 5
 
-## Installation
+Let's get your blog optimized for PC, iPhone, iPad, and Android. 
+This theme requires the dynamic publishing and DynamicMTML addon.
+
+Please see the documentation for more details:
+
+http://movabletype.org/documentation/smartphone/ (English)
+http://movabletype.jp/documentation/smartphone/ (Japanese)
+
+
+## Requirements
+
+This theme requires:
+
+* Movable Type 5.12 or higher
+* Dynamic MTML addon
+* mod_rewrite module when you are using apache
+* URL Rewrite module when you are using Windows IIS
+
+This theme uses Movable Type's dynamic publishing function.
+Please make sure that your server allows to:
+
+* use .htaccess files
+* specify php_flag either in .htaccess or in php.ini
+
+This theme may cause "500 Internal Server Error" if your server
+is not configured correctly. Please back-up your current blog
+templates to restore your blog and remove the following files to
+recover from the error.
+
+* .htacess
+* .mtview.php
+
+
+## Installing DynamicMTML addon
+
+This theme requires the DynamicMTML addon.
+Download the latest version from the following github repository.
+
+https://github.com/alfasado/DynamicMTML
+
+1. Unpack the archive and upload or copy "DynamicMTML.pack" folder to your MT's addons folder ( /path/to/mt/addons ) .
+2. Create a new folder called "powercms_files" under your MT's root folder ( /path/to/mt/powercms_files ) and grant a write permission from your Movable Type.
+3. Sign-in to MT to complete the database update, and confirm that there is "DynamicMTML Pack x.x.x" in your MT's footer.
+
+
+## Installing Smartphone Theme
+
+Download the latest version from this repository.
 
 1. Unpack the mt-theme-smart-blog archive.
-2. Copy the contents of mt-theme-smart-blog/themes/smart-blog into /path/to/mt/themes
-3. Sign in to your Movable Type and apply the Smart Blog theme.
+2. Upload or copy the mt-theme-smart-blog/themes/smart_blog folder
+   to your MT's themes folder ( /path/to/mt/themes )
+3. Sign in and create a new blog with "Smart Blog" theme
+4. Make sure that "Enable DynamicMTML (Create the file .htaccess
+   underneath your blog directory)" option is checked
+   in "Settings" > "General".
+
+
+## Troubleshooting for "500 Internal Server Error"
+
+### when you are using suEXEC
+
+If your Movable Type is running under suEXEC or CGIWrap environment
+such as on the shared hosting, you must set proper permission to
+your blog folder. If you encounter "500 Internal Server Error" with
+those environments, please try the following configuration directives
+in your mt-config.cgi
+
+    DirUmask 0072
+    HTMLPerms 0777
+    HTMLUmask 0022
+    UploadPerms 0777
+    UploadUmask 0022
+  
+
+### when your server restricts some .htaccess functions
+
+Some shared hosting prohibit to use "Options" directive in .htaccess.
+In that case, please comment out the following statement in
+"DynamicMTML .htaccess" template.
+There are four lines to be commented out.
+
+    This line should be commented out:
+    Options -Indexes +SymLinksIfOwnerMatch
+    As:
+    # Options -Indexes +SymLinksIfOwnerMatch
+
+Also php_flag directive might be prohibited.
+There are four lines to be commented out.
+
+    This line should be commented out:
+    php_flag short_open_tag off
+    As:
+    # php_flag short_open_tag off
+
+Once it is removed from the .htaccess, you should specify it
+in php.ini file for your security.
+
+
+### when you are using apache alias
+
+If your blog is published under the user directory such as
+"http://example.com/~nelson/website/blog/" or under the apache alias,
+you need to specify the path in "DynamicMTML Bootstrapper" template.
+For example if your blog has:
+
+* Site URL: http://example.com/~nelson/website/blog/
+* Site Path: /home/nelson/website/blog
+
+You need to specify as following:
+
+$alias_name = '/~nelson/website/blog/';
+$alias_path = '/home/nelson/website/blog';    
+
+
+## Switching to the other blog theme
+
+If you decided not to use smart blog theme, you can simply re-apply
+the other theme and remove the following two files under your blog root.
+This will also resolve most of "500 Internal Server Error".
+
+* .htacess
+* .mtview.php
+
+
+## Installing on Windows IIS
+
+You need following steps to use this theme on Windows IIS.
+
+### Generate a web.config from the .htaccess
+
+1. Start IIS Manager
+2. Select your blog directory from your site
+3. Open "Rewrite URL"
+4. Click "Import rules"
+5. Select .htaccess file in your blog root and click import
+6. Select "Apply"
+
+### Modify web.config
+
+Open web.config file with a editor, and modify as following:
+
+The following block should be modified
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <configuration>
+        <system.webServer>
+        *******
+        </system.webServer>
+    </configuration>
+
+to
+  
+    <?xml version="1.0" encoding="UTF-8"?>
+    <configuration>
+        <location path="." inheritInChildApplications="false">
+            <system.webServer>
+            *********   
+            </system.webServer>
+        </location>
+    </configuration>
