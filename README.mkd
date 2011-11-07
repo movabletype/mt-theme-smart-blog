@@ -9,6 +9,9 @@ Please see the documentation for more details:
 * http://movabletype.jp/documentation/smartphone/ (Japanese)
 
 
+
+
+
 ## Requirements
 
 This theme requires:
@@ -161,3 +164,14 @@ to
             </system.webServer>
         </location>
     </configuration>
+
+
+## License
+
+This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
+## Copyright
+
+The following copyright notice applies to all the files provided in this distribution, including binary files, unless explicitly noted otherwise.
+
+Copyright 2009-2011 Six Apart, Ltd.
