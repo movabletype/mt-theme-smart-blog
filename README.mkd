@@ -17,7 +17,7 @@ Please see the documentation for more details:
 This theme requires:
 
 * Movable Type 5.12 or higher
-* Dynamic MTML addon
+* Dynamic MTML addon 1.5.6 or higher
 * mod_rewrite module when you are using apache
 * URL Rewrite module when you are using Windows IIS
 
