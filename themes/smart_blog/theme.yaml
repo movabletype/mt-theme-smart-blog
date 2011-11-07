@@ -4,6 +4,8 @@ version: 1.0
 author_link: http://www.sixapart.com/
 author_name: Six Apart, Ltd
 class: blog
+protected: 1
+description: <__trans phrase="Let's get your blog optimized for PC, iPhone, iPad, and Android. This theme requires the dynamic publishing and the DynamicMTML addon.">
 l10n_lexicon:
   de: l10n_de.yaml
   en_us: l10n_en_us.yaml
