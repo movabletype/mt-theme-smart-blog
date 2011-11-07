@@ -11,6 +11,9 @@ l10n_lexicon:
   fr: l10n_fr.yaml
   ja: l10n_ja.yaml
   nl: l10n_nl.yaml
+thumbnail_file: thumb.png
+thumbnail_file_medium: thumb-medium.png
+thumbnail_file_small: thumb-small.png
 required_components:
   DynamicMTML: 1.5.6
 elements:
