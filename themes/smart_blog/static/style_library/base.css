@@ -336,7 +336,7 @@ header a {
     display: block;
     padding: 10px 9px;
     border-width: 0;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-item .count {

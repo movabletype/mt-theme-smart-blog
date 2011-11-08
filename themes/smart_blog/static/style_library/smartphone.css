@@ -133,7 +133,6 @@ textarea {
 .widget .more-link {
     margin: 0 -9px;
     border-width: 0 0 1px;
-    text-align: center;
     text-decoration: none;
     text-overflow: ellipsis;
     overflow: hidden;
