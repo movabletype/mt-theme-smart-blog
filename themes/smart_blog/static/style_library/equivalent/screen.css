@@ -91,6 +91,8 @@ button:active,
 .header-menu .detail-link {
     background: transparent url(../../images/icon-search-white.png) no-repeat center;
     background-size: 20px;
+    -webkit-background-size: 20px;
+    -moz-background-size: 20px;
 }
 
 .menu.active .detail-link, 
@@ -119,6 +121,8 @@ button:active,
 .header-menu .widget .nav-item a {
     background: transparent url(../../images/icon-arrow-gray.png) no-repeat center right;
     background-size: 18px;
+    -webkit-background-size: 18px;
+    -moz-background-size: 18px;
 }
 .widget .nav-item a:hover,
 .widget .more-link:hover {
@@ -175,6 +179,8 @@ button:active,
 #comment-greeting .signout-link {
     background: #939393 url(../../images/icon-close-white.png) no-repeat center;
     background-size: 15px;
+    -webkit-background-size: 15px;
+    -moz-background-size: 15px;
     border-radius: 0 0.62em 0.62em 0;
     -webkit-border-radius: 0 0.62em 0.62em 0;
     -moz-border-radius: 0 0.62em 0.62em 0;
