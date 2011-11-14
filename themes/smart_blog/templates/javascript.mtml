@@ -748,7 +748,7 @@ function mtShowCaptcha() {
     var u = mtGetUser();
     if ( u && u.is_authenticated ) return;
     if (mtCaptchaVisible) return;
-    var div = document.getElementById('comments-openo-captcha');
+    var div = document.getElementById('comments-open-captcha');
     if (div) {
         div.innerHTML = '<$mt:CaptchaFields$>';
         mtCaptchaVisible = true;
