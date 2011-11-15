@@ -5,11 +5,7 @@ This theme requires the dynamic publishing and DynamicMTML addon.
 
 Please see the documentation for more details:
 
-* http://movabletype.org/documentation/smartphone/ (English)
 * http://movabletype.jp/documentation/smartphone/ (Japanese)
-
-
-
 
 
 ## Requirements
