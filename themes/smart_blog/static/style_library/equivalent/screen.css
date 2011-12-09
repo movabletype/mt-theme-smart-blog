@@ -154,7 +154,8 @@ button:active,
 #comment-greeting, 
 #comment-form-reply, 
 .comments fieldset, 
-#commenter-info li {
+#commenter-info li, 
+#comments-open-captcha #captcha_code {
     border-color: #bfc5c8;
 }
 
@@ -189,12 +190,16 @@ button,
 .button, 
 #comment-greeting, 
 .comments fieldset, 
+#comments-open-captcha #captcha_code, 
 .comments .comment-preview {
     border-radius: 0.62em;
     -webkit-border-radius: 0.62em;
     -moz-border-radius: 0.62em;
 }
 
+#comments-open-captcha img {
+    background-color: #bfc5c8;
+}
 
 a, 
 .ui-body-a .ui-link {
