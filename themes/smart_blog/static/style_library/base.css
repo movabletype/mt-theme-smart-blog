@@ -611,6 +611,7 @@ header a {
     margin: 0.62em 0;
     padding: 0.62em;
     border: 1px solid black;
+    font-size: 100%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
