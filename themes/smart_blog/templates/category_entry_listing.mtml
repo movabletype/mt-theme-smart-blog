@@ -102,17 +102,19 @@
         </div>
         <script> 
 
-<mt:IfUserAgent wants="SmartPhone">
+<mt:BuildRecurs>
+    <mtml tag="mt:IfUserAgent" params='wants="SmartPhone"'>
 
-    <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
-    <$mt:Include module="<__trans phrase="JavaScript Footer - Mobile">"$>
+        <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="JavaScript Footer - Mobile">"$>
 
-<mt:Else>
+    <mtml tag="mt:else">
 
-    <mt:Ignore><!-- for Other --></mt:Ignore>
-    <$mt:Include module="<__trans phrase="JavaScript Footer">"$>
+        <mt:Ignore><!-- for Other --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="JavaScript Footer">"$>
 
-</mt:IfUserAgent>
+    <mtml tag="/mt:IfUserAgent">
+</mt:BuildRecurs>
 
         </script>
     </body>
