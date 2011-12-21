@@ -25,12 +25,12 @@
             <ul>
                 <li>
                     <label for="comment-author"><__trans phrase="Name"></label>
-                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
+                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$mt:SupportDirectoryURL$>theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
                     <input type="text" id="comment-author" class="text" name="author" value="<mt:If name="comment_preview"><mt:CommentAuthor encode_html="1"></mt:If>" placeholder="<__trans phrase="Your Name">" onfocus="mtCommentFormOnFocus()">
                 </li>
                 <li>
                     <label for="comment-email"><__trans phrase="Email"></label>
-                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
+                    <mt:IfRequireCommentEmails><img alt="<__trans phrase="Required">" src="<$mt:SupportDirectoryURL$>theme_static/smart_blog/images/icon-required.png" class="required-icon"></mt:IfRequireCommentEmails>
                     <input type="email" id="comment-email" class="text" name="email" value="<mt:If name="comment_preview"><mt:CommentEmail encode_html="1"></mt:If>" placeholder="mail@example.com" onfocus="mtCommentFormOnFocus()">
                 </li>
                 <li>
