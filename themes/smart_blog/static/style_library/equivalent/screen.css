@@ -202,10 +202,14 @@ button,
 }
 
 a, 
-.ui-body-a .ui-link {
+.ui-body-a .ui-link, 
+.ui-body-a .ui-link:link,
+.ui-body-a .ui-link:visited, 
+.ui-body-a .ui-link:hover, 
+.ui-body-a .ui-link:active {
     color: #274a78;
 }
-a:hover {
+.ui-body-a .ui-link:hover {
     text-decoration: none;
 }
 
@@ -228,7 +232,14 @@ a:hover {
 }
 .page-header a, 
 .page-footer a, 
-.ui-bar-a .ui-link {
+.ui-bar-a a.ui-link {
+    color: #fff;
+}
+.ui-bar-a a.ui-link, 
+.ui-bar-a a.ui-link:link, 
+.ui-bar-a a.ui-link:visited, 
+.ui-bar-a a.ui-link:hover, 
+.ui-bar-a a.ui-link:active {
     color: #fff;
 }
 .ui-header {
@@ -237,7 +248,7 @@ a:hover {
 }
 
 .ui-body-a {
-    color: #2F3E46;
+    color: #2f3e46;
     background: #fff;
     text-shadow: none;
 }
@@ -249,7 +260,7 @@ a:hover {
     font-family: Helvetica, Arial, sans-serif;
 }
 .ui-body-a .ui-link-inherit {
-    color: #2F3E46;
+    color: #2f3e46;
 }
 
 .ui-content {
@@ -270,7 +281,7 @@ a:hover {
     background-image: linear-gradient(top, #fdfdfd, #eee);
 }
 .ui-btn-up-a a.ui-link-inherit {
-    color: #2F3E46;
+    color: #2f3e46;
 }
 
 .ui-btn-hover-a {
@@ -283,7 +294,7 @@ a:hover {
     background-image: linear-gradient(top, #ededed, #dadada);
 }
 .ui-btn-hover-a a.ui-link-inherit {
-    color: #2F3E46;
+    color: #2f3e46;
 }
 .ui-btn-down-a {
     border: 1px solid #808080;
