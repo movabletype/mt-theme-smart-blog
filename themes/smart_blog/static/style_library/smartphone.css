@@ -235,6 +235,10 @@ textarea {
 #comments-open-captcha {
     text-align: center;
 }
+#comments-open-captcha #captcha_code {
+    display: inline;
+}
+
 #comments-open-footer .ui-btn {
     width: 100%;
     margin: 0.62em 0 0;
@@ -243,7 +247,7 @@ textarea {
 /* - Content Navigation */
 .content-nav .ui-btn {
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;    
+    -webkit-box-sizing: border-box;
 }
 
 /* - Footer */
