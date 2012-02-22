@@ -595,9 +595,31 @@ header a {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-appearance: none;
 }
 #commenter-info li input[required] {
     padding-right: 2em;
+}
+#comments-open-captcha {
+    margin: 1.62em 0;
+}
+#comments-open-captcha .label {
+    display: none;
+}
+#comments-open-captcha #captcha_code {
+    width: 150px;
+    margin: 0.62em 0;
+    padding: 0.62em;
+    border: 1px solid black;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+}
+#comments-open-captcha p {
+    margin: 0;
+    font-size: 90%;
 }
 
 /* - Content Navigation */

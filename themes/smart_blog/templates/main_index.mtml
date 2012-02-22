@@ -69,7 +69,7 @@
 <mt:Assets tag="@SITE_BANNER" limit="1">
                     <img src="<$mt:AssetThumbnailURL width="1024"$>">
 <mt:Else>
-                    <img src="<$MTStaticWebPath$>support/theme_static/smart_blog/images/banner.jpg">
+                    <img src="<$mt:SupportDirectoryURL$>theme_static/smart_blog/images/banner.jpg">
 </mt:Assets>
                 </div>
             </div>
@@ -115,6 +115,11 @@
 
         <mt:Ignore><!-- for Smart Phone --></mt:Ignore>
         <$mt:Include module="<__trans phrase="JavaScript Footer - Mobile">"$>
+
+    <mtml tag="mt:else">
+
+        <mt:Ignore><!-- for Other --></mt:Ignore>
+        <$mt:Include module="<__trans phrase="JavaScript Footer">"$>
 
     <mtml tag="/mt:IfUserAgent">
 </mt:BuildRecurs>
