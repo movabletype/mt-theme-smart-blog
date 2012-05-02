@@ -38,7 +38,7 @@ recover from the error.
 This theme requires the DynamicMTML addon.
 Download the latest version from the following github repository.
 
-https://github.com/alfasado/DynamicMTML
+https://github.com/movabletype/DynamicMTML
 
 1. Unpack the archive and upload or copy "DynamicMTML.pack" folder to your MT's addons folder ( /path/to/mt/addons ) .
 2. Create a new folder called "powercms_files" under your MT's root folder ( /path/to/mt/powercms_files ) and grant a write permission from your Movable Type.
