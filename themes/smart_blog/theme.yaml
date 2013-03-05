@@ -17,7 +17,7 @@ thumbnail_file: thumb.png
 thumbnail_file_medium: thumb-medium.png
 thumbnail_file_small: thumb-small.png
 required_components:
-  DynamicMTML: 1.5.6
+  DynamicMTML: 1.61
 elements:
   default_prefs:
     component: core
