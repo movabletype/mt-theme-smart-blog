@@ -165,7 +165,7 @@ to
 
 ## License
 
-This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+This theme is released under the MIT License.  For the full text of the license, consult the LICENSE.mkd file that was included in this theme's distribution.
 
 ## Copyright
 
